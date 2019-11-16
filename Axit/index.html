@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="shortcut icon" href="img/Logo.ico" type="image/x-icon">
+	<meta name="viewport" content= "width=device-width, initial-scale=1.0"> 
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700&display=swap" rel="stylesheet"> 
+	<title>Axit</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header-page">
+			<header class="header">
+				<div class="wrap-logo"><img src="img/Logo.png" alt="logotip" class="logo"></div>
+
+					<!-- Выпадающее меню -->
+					<div class="hidden-menu">
+						<div class="one-line"></div>
+						<div class="two-line"></div>
+					</div>
+
+					<div class="wrap-links-hidden">
+						<a href="#" class="link-hidden">Features</a><br>
+						<a href="#" class="link-hidden">About</a><br>
+						<a href="#" class="link-hidden">Pricing</a><br>
+						<a href="#" class="link-hidden">Reviews</a><br>
+						<a href="#" class="link-hidden">Contact</a><br>
+					</div>
+
+					<script>
+						let hiddenMenu = document.querySelector(".hidden-menu");
+						let = wrapLinksHidden = document.querySelector(".wrap-links-hidden");
+						let oneLine = document.querySelector(".one-line");
+						let twoLine = document.querySelector(".two-line");
+
+						hiddenMenu.addEventListener('mouseover', () => {
+							oneLine = document.querySelector(".one-line");
+							twoLine = document.querySelector(".two-line");
+							oneLine.style.transform = "rotate(25deg)";
+							twoLine.style.transform = "rotate(-25deg)";
+						});
+
+						hiddenMenu.addEventListener('mouseout', () => {
+							oneLine.style.transform = "rotate(0deg)";
+							twoLine.style.transform = "rotate(0deg)";
+						});
+
+						hiddenMenu.addEventListener('click', () => {
+							if (wrapLinksHidden.style.display == "block") {
+								wrapLinksHidden.style.display = "none";
+							} else {
+								wrapLinksHidden.style.display = "block";
+								wrapLinksHidden.classList.add("wrap-links-hidden2");
+							};
+						});
+					</script>
+					<!-- Выпадающее меню - конец -->
+
+				<nav class="navigation">
+					<div class="wrap-links-haders">
+						<a href="#" class="link-header">Features</a>
+						<a href="#" class="link-header">About</a>
+						<a href="#" class="link-header">Pricing</a>
+						<a href="#" class="link-header">Reviews</a>
+						<a href="#" class="link-header">Contact</a>
+					</div>
+				</nav>
+			</header>
+			<main class="main-wrap">
+				<div class="wrap-flex-main">
+					<div class="wrap-content-main">
+						<img src="img/Logotitle.png" alt="logo-main" class="logo-main">
+						<h1 class="title-content-main">MODERN AXURE TEMPLATE FOR BEAUTIFUL PROTOTYPES</h1>
+						<p class="text-content-main">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+							euismod bibendum laoreet. Proin gravida dolor sit amet lacus
+							accumsan et viverra justo commodo.
+						</p>
+
+						<button class="btn-of-main">Download</button>
+					</div>
+
+					<div class="wrap-form">
+						<form action="#" method="#" class="form-of-main">
+							<div class="title-of-form">
+								Try Your <span class="title-of-form-element">FREE</span> Trial Today
+							</div>
+							<input type="text" class="input-text-form-of-main" placeholder="Name"><br>
+							<input type="text" class="input-text-form-of-main" placeholder="Email"><br>
+							<input type="text" class="input-text-form-of-main" placeholder="Password"><br>
+							<input type="button" class="btn-of-form-main" value="Get Started">
+						</form>
+					</div>
+				</div>
+			</main>
+		</header>
+
+		<section class="social-media">
+			<div class="wrap-flex-social">
+				<div class="wrap-text-social-media">
+					<h3 class="title-social-media">
+						Social Media
+					</h3>
+					<p class="text-social-media">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+						Aenean euismod bibendum laoreet.
+					</p>
+				</div>
+				<div class="wrap-icon-socual-media">
+					<img src="img/email_icon.png" alt="#" class="icon-social">
+					<img src="img/skype_icon.png" alt="#" class="icon-social">
+					<img src="img/icq_icon.png" alt="#" class="icon-social">
+					<img src="img/phone_icon.png" alt="#" class="icon-social">
+				</div>
+			</div>	
+		</section>
+
+		<section class="tabs">
+			<div class="wrap-flex-tabs">
+				<div class="wrap-tabs-block">
+					<div class="tab-item">Tab 1</div>
+					<div class="tab-item">Tab 2</div>
+					<div class="tab-item">Tab 3</div>
+				</div>
+
+				<div class="wrap-content-tabs">
+					<h2 class="h2-title-tabs">
+						Tabs with soft transitioning effect.
+					</h2>
+					<p class="p-text-tabs">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod 
+						bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra 
+						justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque 
+						penatibus et magnis dis parturient montes.<br><br>
+
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod 
+						bibendum laoreet.
+					</p>
+				</div>
+
+				<div class="wrap-img-tabs">
+					<img src="img/image_right_u255.png" alt="#" class="img-tabs">
+				</div>
+			</div>
+		</section>
+
+		<section class="sub">
+			<div class="wrap-flex-sub">
+				<div class="wrap-img">
+					<img src="img/image_left_sub_list_u260.png" alt="#" class="img-sub">
+				</div>
+
+				<div class="wrap-content-sub">
+					<h2 class="h2-title-sub">
+						Sub list section
+					</h2>
+
+					<p class="p-text-sub">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean 
+						euismod bibendum laoreet. Proin gravida dolor sit amet lacus 
+						accumsan et viverra justo commodo.
+					</p>
+
+					<h3 class="h3-title-of-text-title-sub">Title</h3>
+					<p class="p-text-title-sub">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+						Aenean euismod bibendum laoreet.
+					</p>
+					<h3 class="h3-title-of-text-title-sub">Title</h3>
+					<p class="p-text-title-sub">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+						Aenean euismod bibendum laoreet.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="picture-section">
+			<div class="wrap-flex-picture-section">
+				<div class="wrap-content-picture-section">
+					<h3 class="h3-title-picture-section">
+						Standard Picture Section
+					</h3>
+
+					<p class="p-text-picture-section">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean 
+						euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan 
+						et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis 
+						natoque penatibus et magnis dis parturient montes.<br><br>
+
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod 
+						bibendum laoreet.
+					</p>
+				</div>
+
+				<div class="wrap-img-picture-section">
+					<img src="img/picturesection.png" alt="" class="img-picture-section">
+				</div>
+		</section>
+
+		<section class="why-this">
+			<h2 class="h2-title-why">
+				WHY THIS IS AWESOME
+			</h2>
+			<p class="p-text-why">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			</p>
+
+			<div class="wrap-flex-why">
+				<div class="item-box-why">
+					<img src="img/.png" alt="#" class="img-of-why">
+					<h2 class="h2-title-box-why">
+						Thoughtful Design
+					</h2>
+					<p class="p-text-box-why">
+						Lorem ipsum dolor sit amet, consectetur adipiscing 
+						elit. Aenean euismod bibendum laoreet. Proin gravida 
+						dolor sit amet lacus accumsan et viverra.
+					</p>
+				</div>
+				<div class="item-box-why">
+					<img src="img/.png" alt="#" class="img-of-why">
+					<h2 class="h2-title-box-why">
+						Thoughtful Design
+					</h2>
+					<p class="p-text-box-why">
+						Lorem ipsum dolor sit amet, consectetur adipiscing 
+						elit. Aenean euismod bibendum laoreet. Proin gravida 
+						dolor sit amet lacus accumsan et viverra.
+					</p>
+				</div>
+				<div class="item-box-why">
+					<img src="img/.png" alt="#" class="img-of-why">
+					<h2 class="h2-title-box-why">
+						Thoughtful Design
+					</h2>
+					<p class="p-text-box-why">
+						Lorem ipsum dolor sit amet, consectetur adipiscing 
+						elit. Aenean euismod bibendum laoreet. Proin gravida 
+						dolor sit amet lacus accumsan et viverra.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="pricing-options">
+			<h2 class="h2-title-pricing">
+				PRICING OPTIONS
+			</h2>
+			<p class="p-text-pricing">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			</p>
+			<div class="wrap-flex-pricing">
+				<div class="item-box-pricing">
+					<div class="head-box-pricing">
+						<span class="text-head-box-pricing">Basic</span>
+					</div>
+					<div class="pricing">
+						<span class="text-pricing">$0</span>
+					</div>
+					<div class="wrap-list-pos">
+						<span class="list-pos-item">1 gb of space</span>
+						<span class="list-pos-item">10 gb of bandwidth</span>
+						<span class="list-pos-item">3 websites</span>
+						<span class="list-pos-item">Basic Customization</span>
+						<span class="list-pos-item">wordpress integration</span>
+						<span class="list-pos-item">email support</span>
+					</div>
+				</div>
+
+				<div class="item-box-pricing">
+					<div class="head-box-pricing">
+						<span class="text-head-box-pricing">Professional</span>
+					</div>
+					<div class="pricing">
+						<span class="text-pricing">$19</span>
+					</div>
+					<div class="wrap-list-pos">
+						<span class="list-pos-item">1 gb of space</span>
+						<span class="list-pos-item">10 gb of bandwidth</span>
+						<span class="list-pos-item">3 websites</span>
+						<span class="list-pos-item">Basic Customization</span>
+						<span class="list-pos-item">wordpress integration</span>
+						<span class="list-pos-item">email support</span>
+					</div>
+				</div>
+
+				<div class="item-box-pricing">
+					<div class="head-box-pricing">
+						<span class="text-head-box-pricing">Enterprice</span>
+					</div>
+					<div class="pricing">
+						<span class="text-pricing">$70</span>
+					</div>
+					<div class="wrap-list-pos">
+						<span class="list-pos-item">1 gb of space</span>
+						<span class="list-pos-item">10 gb of bandwidth</span>
+						<span class="list-pos-item">3 websites</span>
+						<span class="list-pos-item">Basic Customization</span>
+						<span class="list-pos-item">wordpress integration</span>
+						<span class="list-pos-item">email support</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="what">
+			<h2 class="h2-title-what">WHAT OUR CUSTOMERS ARE SAYING</h2>
+			<p class="p-text-what">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+			<div class="wrap-flex-what">
+				<div class="item-what-box">
+					<div class="review-what-item">
+						<p class="text-of-what-review">
+							Lorem ipsum dolor sit amet, 
+							consectetur adipisicing elit. Doloribus 
+							accusamus expedita repellat similique 	
+							odio aspernatur ex, architecto eaque 
+							quo suscipit.
+						</p>
+					</div>
+					<div class="user-what">
+						<div class="wrap-photo-user">
+							<img src="img/user-what.png" alt="#" class="img-photo-user">
+						</div>
+						<div class="wrap-info-user">
+							<p class="name-user-what">Jeremy H.</p>
+							<p class="work-user-what">Freelancer</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="item-what-box">
+					<div class="review-what-item">
+						<p class="text-of-what-review">
+							Lorem ipsum dolor sit amet, 
+							consectetur adipisicing elit. Doloribus 
+							accusamus expedita repellat similique 	
+							odio aspernatur ex, architecto eaque 
+							quo suscipit.
+						</p>
+					</div>
+					<div class="user-what">
+						<div class="wrap-photo-user">
+							<img src="img/user-what.png" alt="#" class="img-photo-user">
+						</div>
+						<div class="wrap-info-user">
+							<p class="name-user-what">Jeremy H.</p>
+							<p class="work-user-what">Freelancer</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="item-what-box">
+					<div class="review-what-item">
+						<p class="text-of-what-review">
+							Lorem ipsum dolor sit amet, 
+							consectetur adipisicing elit. Doloribus 
+							accusamus expedita repellat similique 	
+							odio aspernatur ex, architecto eaque 
+							quo suscipit.
+						</p>
+					</div>
+					<div class="user-what">
+						<div class="wrap-photo-user">
+							<img src="img/user-what.png" alt="#" class="img-photo-user">
+						</div>
+						<div class="wrap-info-user">
+							<p class="name-user-what">Jeremy H.</p>
+							<p class="work-user-what">Freelancer</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="stylish">
+			<h2 class="h2-title-stylish">STYLISH AXURE DESIGN</h2>
+			<p class="p-text-stylish">
+				Use the sections you need, remove the ones you don't.  Create gorgeous prototypes faster than ever!
+			</p>
+
+			<div class="wrap-btn-stylish">
+				<button class="btn-stylish">Download</button>
+			</div>
+		</section>
+
+		<section class="contact-us">
+			<h2 class="h2-title-contactus">CONTACT US</h2>
+			<p class="p-text-contactus">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			<div class="wrap-form-contactus">
+				<form action="#">
+					<input type="text" class="input-contactus" placeholder="Name"><br>
+					<input type="text" class="input-contactus" placeholder="Email"><br>
+					<input type="text" class="input-contactus" placeholder="Sybject"><br>
+					<textarea name="#" class="textarea-contactus" placeholder="Message"></textarea><br>
+					<button class="btn-send-contacts">Send Message</button>
+				</form>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="wrap-address">
+				<address class="address">Автор: Alexander Pike</address>
+			</div>
+		</footer>
+	</div>
+	<script src="js/anim.js"></script>
+</body>
+</html>
