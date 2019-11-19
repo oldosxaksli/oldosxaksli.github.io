@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+body {
+	background-color: silver;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1600px;
+	width: 100%;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+.content {
+	font-size: 18px;
+}
+
+.header-page {
+	width: 100%;
+	min-height: 1000px;
+	background-color: #fff;
+	background: url(../img/bgmain.webp);
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: cover;
+}
+
+.one-header {
+	width: 100%;
+	min-height: 90px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.one-header__nav, 
+.one-header__item:first-child {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.one-header__link {
+	margin-right: 15px;
+	text-decoration: none;
+	color: #26272d;
+	font-family: Lato;
+	font-size: 16px;
+	font-weight: 400;
+	transition: all .3s ease;
+}
+
+.one-header__link:nth-child(3) {
+	margin-right: 0;
+}
+
+.one-header__link:hover {
+	opacity: .6;
+}
+
+.one-header__link--getapp {
+	position: relative;
+	width: 132px;
+	height: 42px;
+	color: #fff;
+	text-align: center;
+	line-height: 42px;
+	border-radius: 21px;
+	background-color: #267df4;
+}
+
+.one-header__link--getapp::before {
+	position: absolute;
+	display: block;
+	content: url(../img/Apple_Icon.webp);
+	transform: translateY(-40%);
+	top: 50%;
+	left: 10px;
+}
+
+.one-header__title {
+	text-transform: uppercase;
+	font-family: Lato;
+	font-weight: 400px;
+	color: #26272d;
+	font-size: 20px;
+}
+
+.one-header__title--span {
+	font-family: Lato;
+	font-weight: 300;
+	font-size: 20px;
+}
