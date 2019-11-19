@@ -24,6 +24,7 @@ body {
 	background-repeat: no-repeat;
 	background-position: top;
 	background-size: cover;
+	position: relative;
 }
 
 .one-header {
@@ -91,4 +92,72 @@ body {
 	font-family: Lato;
 	font-weight: 300;
 	font-size: 20px;
+}
+
+.one-header__wrap-text {
+	margin-top: 202px;
+}
+
+.one-header__wrap-text__title {
+	text-align: center;
+	max-width: 788px;
+	color: #26272d;
+	font-family: "Varela Round";
+	font-size: 62px;
+	font-weight: 400;
+	line-height: 72px;
+	margin: 0 auto;
+}
+
+.one-header__wrap-text__paragraph {
+	text-align: center;
+	max-width: 780px;
+	margin-top: 40px;
+	color: #8c8f94;
+	font-family: Lato;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 28px;
+	margin: 0 auto;
+}
+
+.one-header__wrap-btn {
+	margin: 62px auto 0 auto;
+	max-width: 205px;	
+}
+
+.start-video {
+	position: relative;
+	width: 205px;
+	height: 50px;
+	border-radius: 25px;
+	border: 1px solid #26272d;
+	color: #26272d;
+	font-family: Lato;
+	font-size: 16px;
+	font-weight: 400;
+	transition: all .3s ease;
+}
+
+.start-video::before {
+	position: absolute;
+	display: block;
+	content: url(../img/Play_Icon.svg);
+	transform: translateY(-50%);
+	top: 50%;
+	left: 25px;
+}
+
+.start-video:hover {
+	cursor: pointer;
+	opacity: .6;
+}
+
+.bottom-img {
+	position: absolute;
+	max-width: 349px;
+	width: 55%;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
 }
