@@ -161,3 +161,39 @@ body {
 	bottom: 0;
 	transform: translateX(-50%);
 }
+
+.two-block {
+	width: 100%;
+	min-height: 600px;
+	background-color: #ffffff;
+}
+
+.wrap-two-block {
+	margin-top: 152px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.wrap-two-block__item {
+	max-width: 410px;
+	margin: 0 auto;
+}
+
+.wrap-two-block__title {
+	margin-top: 45px;
+	color: #26272d;
+	font-family: Lato;
+	font-size: 26px;
+	font-weight: 300;
+	line-height: 34px;
+}
+
+.wrap-two-block__text {
+	margin-top: 48px;
+	color: #8c8f94;
+	font-family: Lato;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 26px;
+}
