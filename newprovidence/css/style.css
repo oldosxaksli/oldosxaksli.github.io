@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 body {
-	background-color: silver;
+	background-color: #000;
 }
 
 .wrapper {
@@ -172,12 +172,15 @@ body {
 	margin-top: 152px;
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: center;
 }
 
 .wrap-two-block__item {
 	max-width: 410px;
-	margin: 0 auto;
+}
+
+.wrap-two-block__item:first-child {
+	margin-right: 10%;
 }
 
 .wrap-two-block__title {
@@ -196,4 +199,120 @@ body {
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 26px;
+}
+
+.your {
+	width: 100%;
+	min-height: 900px;
+	background-color: #edf2ef;
+}
+
+.your__wrap {
+	padding-top: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.img-your {
+	max-width: 600px;
+}
+
+.your__title {
+	color: #26272d;
+	font-family: "Varela Round";
+	font-size: 42px;
+	font-weight: 400;
+	line-height: 52px;
+}
+
+.your__text {
+	margin-top: 73px;
+	max-width: 400px;
+	color: #8c8f94;
+	font-family: Lato;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 28px;
+}
+
+.your__wrap__btn {
+	margin-top: 75px;
+}
+
+.your__btn:hover {
+	cursor: pointer;
+	opacity: .8;
+}
+
+.your__btn:first-child {
+	position: relative;
+	border: none;
+	width: 202px;
+	height: 42px;
+	border-radius: 21px;
+	background-color: #267df4;
+	color: #ffffff;
+	font-family: Lato;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.your__btn:first-child::before {
+	position: absolute;
+	display: block;
+	right: 20px;
+	content: url(../img/Arrow_Icon.svg);
+}
+
+.your__btn:last-child {
+	background-color: #fff;
+	margin-left: 10px;
+	border: none;
+	width: 202px;
+	height: 42px;
+	color: #26272d;
+	font-family: Lato;
+	font-size: 16px;
+	font-weight: 400;
+	border-radius: 21px;
+}
+
+.almost {
+	width: 100%;
+	min-height: 900px;
+	background-color: #ffffff;
+}
+
+.almost__wrap {
+	margin-top: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.almost__title {
+	color: #26272d;
+	font-family: "Varela Round";
+	font-size: 42px;
+	font-weight: 400;
+	line-height: 52px;
+}
+
+.almost__text {
+	margin-top: 64px;
+	max-width: 450px;
+	color: #8c8f94;
+	font-family: Lato;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 28px;
+}
+
+.almost__wrap__img {
+
+}
+
+.almost-img {
+	max-width: 600px;
 }
