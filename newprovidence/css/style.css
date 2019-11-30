@@ -383,7 +383,7 @@ body {
 
 .get-it {
 	width: 100%;
-	min-height: 550px;
+	min-height: 680px;
 	background-color: #f5f5f8;
 }
 
@@ -446,4 +446,138 @@ body {
 	background: transparent;
 	width: 163px;
 	font-size: 16px;
-} 
+}
+
+.getit__input[placeholder] {
+	padding-left: 10px;
+}
+
+.getit__mintext {
+	display: block;
+	text-align: center;
+	margin-top: 70px;
+	opacity: 0.3;
+	color: #3a3d4b;
+	font-family: Lato;
+	font-size: 12px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.wrap-getit__two-btn {
+	margin-top: 117px;
+	text-align: center;
+}
+
+.getit__two-btn {
+	position: relative;
+	display: inline-block;
+	width: 210px;
+	height: 60px;
+	border-radius: 30px;
+	background-color: #131315;
+	transition: all .3s ease;
+}
+
+.getit__two-btn:hover {
+	cursor: pointer;
+	opacity: .8;
+}
+
+.getit__two-btn::before {
+	position: absolute;
+	content: url(../img/Apple_Logo.svg);
+	display: block;
+	top: 50%;
+	left: 15px;
+	transform: translateY(-50%);
+}
+
+.text-two-btn {
+	font-size: 16px;
+	line-height: 60px;
+	color: #fff;
+}
+
+.providense {
+	width: 100%;
+	min-height: 700px;
+	background-color: #ffffff;
+}
+
+.wrap-providence-slider {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+	justify-content: space-around;
+	padding-top: 50px;
+	margin-top: 135px;
+}
+
+.providence__slider__wrap-user {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.providence__content-text {
+	text-align: center;
+}
+
+.providence__title {
+	text-align: center;
+	margin-top: 70px;
+	color: #26272d;
+	font-family: Lato;
+	font-size: 32px;
+	font-weight: 300;
+	line-height: 38px;
+}
+
+.providence__text {
+	margin-top: 45px;
+	max-width: 554px;
+	height: 76px;
+	color: #8c8f94;
+	font-family: Lato;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 28px;
+}
+
+.providence__wrap-star {
+	margin-top: 30px;
+}
+
+.providence__name__item-user {
+	margin-top: 60px;
+	display: inline-block;
+	color: #26272d;
+	font-family: Lato;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 22px;
+	text-transform: uppercase;
+}
+
+.btn-slider {
+	border: none;
+	background: transparent;
+	transition: all .3s ease;
+}
+
+.btn-slider {
+	cursor: pointer;
+}
+
+.left,
+.right {
+	width: 22px;
+	height: 41px;
+	transition: all .2s ease;
+}
+
+.left:hover,
+.right:hover {
+	height: 30px;
+}
