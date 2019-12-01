@@ -1,0 +1,73 @@
+@charset: 'utf-8';
+
+input {
+	outline: none;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	background-image: url(../img/run.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+}
+
+.form {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	width: 310px;
+	height: 300px;
+	background-color: rgba(0, 0, 0, 0.6);
+	border-radius: 5px;
+}
+
+.input-form {
+	margin-top: 20px; 
+	width: 200px;
+	height: 39px;
+	border: none;
+	background: #fff;
+	opacity: .9;
+	border-bottom: 4px solid #4ec746;
+	transition: all .2s ease;
+}
+
+.input-form:hover {
+	opacity: 1;
+}
+
+.input-form[placeholder] {
+	padding-left: 5px;
+	font-size: 12px;
+}
+
+.input-form:focus {
+	border-bottom: 4px solid blue;
+}
+
+.input-form:first-child {
+	margin-top: 42px;
+}
+
+.select {
+	background: #fff;
+	transition: all .2s ease; 
+}
+
+.select:hover {
+	cursor: pointer;
+}
+
+.btn-form {
+	border-bottom: 4px solid red;
+	transition: all .2s ease; 
+}
+
+.btn-form:hover {
+	cursor: pointer;
+}
