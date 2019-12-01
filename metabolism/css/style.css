@@ -14,6 +14,22 @@ input {
 	position: relative;
 }
 
+.out-resulatat {
+	display: none;
+	padding: 10px 15px;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	position: absolute;
+	max-width: 310px;
+	width: 50%;
+	text-align: center;
+	font-size: 16px;
+	color: #fff;
+	background-color: pink;
+	border-radius: 5px;
+}
+
 .form {
 	position: absolute;
 	top: 50%;
