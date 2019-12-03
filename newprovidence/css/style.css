@@ -616,8 +616,34 @@ body {
 	text-transform: uppercase;
 }
 
+.choose__subtitle-two {
+	margin-top: 75px;
+	width: 351px;
+	color: #8c8f94;
+	font-family: Lato;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 28px;
+}
 
+.choose__subtitle__end {
+	display: inline-block;
+	margin-top: 40px;
+	color: #8c8f94;
+	font-family: Lato;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 24px;
+}
 
+.choose__subtitle__end a {
+	color: #267df4;
+	text-decoration: underline;
+}
+
+.choose__subtitle__end a:hover {
+	cursor: pointer;
+}
 
 .choose__item:last-child {
 	display: flex;
@@ -707,4 +733,45 @@ body {
 .choose__btn:hover {
 	cursor: pointer;
 	opacity: .8;
+}
+
+.subscribe {
+	width: 100%;
+	min-height: 320px;
+	background-color: #ffffff;
+}
+
+.wrap-subscribe {
+	margin-top: 85px;
+}
+
+.subscribe__title {
+	text-align: center;
+	color: #26292c;
+	font-family: "Varela Round";
+	font-size: 42px;
+	font-weight: 400;
+	line-height: 52px;
+}
+
+.subscribe__subtext {
+	text-align: center;
+	display: block;
+	margin: 45px auto 0 auto;
+	color: #8c8f94;
+	font-family: Lato;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+.footer {
+	width: 100%;
+	min-height: 50px;
+	background-color: #dedede;
+}
+
+.address {
+	line-height: 50px;
+	text-align: center;
 }
