@@ -5,24 +5,19 @@ let age = document.querySelector(".age");
 let res = 0;
 
 function validation() {
-	if (massa.value && age.value) {
-		if (massa.value >= 20 && massa.value <= 120) {
-			true;
-		} else {
-			alert("Вес должен быть 20 - 120кг");
-		}
-
-		if (age.value >= 10 && age.value <= 100) {
-			true;
-		} else {
-			alert("Возраст должен быть 10 - 100лет");
-		}
-	}
-	else {
-		alert("error validation");
+	if (massa.value >= 20 && massa.value <= 120) {
+		true;
+	} else {
+		alert("Вес должен быть от 20 до 120кг");
+		return false;
 	}
 
-	return true;
+	if (age.value >= 10 && age.value <= 100) {
+		true;
+	} else {
+		alert("Возраст должен быть от 10 до 100лет");
+		return false;
+	}
 }
 
 function man() {
@@ -39,7 +34,7 @@ function man() {
 		res = (13.5 * massa.value) + 679;
 		alert("Ваш основной обмен веществ составляет " + res.toFixed(0) + " калорий в сутки!");
 	} else {
-		console.log("Непонятная ошибка при вычислении!");
+		alert("Непонятная ошибка при вычислении Man!");
 	}
 }
 
@@ -57,21 +52,21 @@ function woman() {
 		res = (10.5 * massa.value) + 596;
 		alert("Ваш основной обмен веществ составляет " + res.toFixed(0) + " калорий в сутки!");
 	} else {
-		console.log("Непонятная ошибка при вычислении!");
+		alert("Непонятная ошибка при вычислении Woman!");
 	}
 }
 
 btn.addEventListener('click', () => {
-	if (massa.value != "" && age.value != "") {
-		
-		validation();
-
-		if (select.value == 1) {
-			man();
-		} else if (select.value == 0) {
-			woman();
-		}
+	validation();
+	if (validation() == false) {
+		alert("Проверьте введенные данные!");
+	}
+	else if (select.value == 1) {
+		man();
+	}
+	else if (select.value == 0) {
+		woman();
 	} else {
-		alert("Непонятная ошибка!");
+		alert("Непонятная ошибка при клике!");
 	}
 });
