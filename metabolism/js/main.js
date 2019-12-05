@@ -7,15 +7,12 @@ let res = 0;
 function validation() {
 	if (massa.value >= 20 && massa.value <= 120) {
 		return true;
-	} else {
-		alert("Вес должен быть от 20 до 120кг");
-		return false;
 	}
-
-	if (age.value >= 10 && age.value <= 100) {
+	else if (age.value >= 10 && age.value <= 100) {
 		return true;
-	} else {
-		alert("Возраст должен быть от 10 до 100лет");
+	}
+	else {
+		alert("Проверьте введенные данные в форме");
 		return false;
 	}
 }
@@ -34,7 +31,7 @@ function man() {
 		res = (13.5 * massa.value) + 679;
 		alert("Ваш основной обмен веществ составляет " + res.toFixed(0) + " калорий в сутки!");
 	} else {
-		alert("Непонятная ошибка при вычислении Man!");
+		alert("Error Man!");
 	}
 }
 
@@ -52,7 +49,7 @@ function woman() {
 		res = (10.5 * massa.value) + 596;
 		alert("Ваш основной обмен веществ составляет " + res.toFixed(0) + " калорий в сутки!");
 	} else {
-		alert("Непонятная ошибка при вычислении Woman!");
+		alert("Error Woman!");
 	}
 }
 
