@@ -6,14 +6,14 @@ let res = 0;
 
 function validation() {
 	if (massa.value >= 20 && massa.value <= 120) {
-		true;
+		return true;
 	} else {
 		alert("Вес должен быть от 20 до 120кг");
 		return false;
 	}
 
 	if (age.value >= 10 && age.value <= 100) {
-		true;
+		return true;
 	} else {
 		alert("Возраст должен быть от 10 до 100лет");
 		return false;
