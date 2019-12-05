@@ -1,38 +1,43 @@
-let close = document.querySelector(".close");
 let btn = document.querySelector(".btn-form");
 let select = document.querySelector(".select");
 let massa = document.querySelector(".massa");
 let age = document.querySelector(".age");
-let outResulatat = document.querySelector(".out-resulatat");
 let res = 0;
 
 function validation() {
-	if (massa.value >= 20 && massa.value <= 120) {
-		true;
-	} else {
-		massa.value = "Вес должен быть 20 - 120кг";
+	if (massa.value && age.value) {
+		if (massa.value >= 20 && massa.value <= 120) {
+			true;
+		} else {
+			alert("Вес должен быть 20 - 120кг");
+		}
+
+		if (age.value >= 10 && age.value <= 100) {
+			true;
+		} else {
+			alert("Возраст должен быть 10 - 100лет");
+		}
+	}
+	else {
+		alert("error validation");
 	}
 
-	if (age.value >= 10 && age.value <= 100) {
-		true;
-	} else {
-		age.value = "Возраст должен быть 10 - 100лет";
-	}
+	return true;
 }
 
 function man() {
 	if (age.value >= 10 && age.value <= 17) {
 		res = (17.5 * massa.value) + 651;
-		outResulatat.textContent = "Ваш основной обмен веществ составляет " + res.toFixed(1) + " калорий в сутки!";
+		alert("Ваш основной обмен веществ составляет " + res.toFixed(0) + " калорий в сутки!");
 	} else if (age.value >= 18 && age.value <= 29) {
 		res = (15.3 * massa.value) + 679;
-		outResulatat.textContent = "Ваш основной обмен веществ составляет " + res.toFixed(1) + " калорий в сутки!";
+		alert("Ваш основной обмен веществ составляет " + res.toFixed(0) + " калорий в сутки!");
 	} else if (age.value >= 30 && age.value <= 60) {
 		res = (11.6 * massa.value) + 879;
-		outResulatat.textContent = "Ваш основной обмен веществ составляет " + res.toFixed(1) + " калорий в сутки!";
+		alert("Ваш основной обмен веществ составляет " + res.toFixed(0) + " калорий в сутки!");
 	} else if (age.value > 60) {
 		res = (13.5 * massa.value) + 679;
-		outResulatat.textContent = "Ваш основной обмен веществ составляет " + res.toFixed(1) + " калорий в сутки!";
+		alert("Ваш основной обмен веществ составляет " + res.toFixed(0) + " калорий в сутки!");
 	} else {
 		console.log("Непонятная ошибка при вычислении!");
 	}
@@ -41,16 +46,16 @@ function man() {
 function woman() {
 	if (age.value >= 10 && age.value <= 17) {
 		res = (12.2 * massa.value) + 746;
-		outResulatat.textContent = "Ваш основной обмен веществ составляет " + res.toFixed(1) + " калорий в сутки!";
+		alert("Ваш основной обмен веществ составляет " + res.toFixed(0) + " калорий в сутки!");
 	} else if (age.value >= 18 && age.value <= 29) {
 		res = (14.7 * massa.value) + 496;
-		outResulatat.textContent = "Ваш основной обмен веществ составляет " + res.toFixed(1) + " калорий в сутки!";
+		alert("Ваш основной обмен веществ составляет " + res.toFixed(0) + " калорий в сутки!");
 	} else if (age.value >= 30 && age.value <= 60) {
 		res = (8.7 * massa.value) + 829;
-		outResulatat.textContent = "Ваш основной обмен веществ составляет " + res.toFixed(1) + " калорий в сутки!";
+		alert("Ваш основной обмен веществ составляет " + res.toFixed(0) + " калорий в сутки!");
 	} else if (age.value > 60) {
 		res = (10.5 * massa.value) + 596;
-		outResulatat.textContent = "Ваш основной обмен веществ составляет " + res.toFixed(1) + " калорий в сутки!";
+		alert("Ваш основной обмен веществ составляет " + res.toFixed(0) + " калорий в сутки!");
 	} else {
 		console.log("Непонятная ошибка при вычислении!");
 	}
@@ -66,14 +71,7 @@ btn.addEventListener('click', () => {
 		} else if (select.value == 0) {
 			woman();
 		}
-	close.style.display = "block";
-	outResulatat.style.display = "block";
 	} else {
-		massa.textContent = "Непонятная ошибка!";
-		age.textContent = "Непонятная ошибка!";
+		alert("Непонятная ошибка!");
 	}
-});
-
-close.addEventListener('click', () => {
-	outResulatat.style.display = "none";
 });
