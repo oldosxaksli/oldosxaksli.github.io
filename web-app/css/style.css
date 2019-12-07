@@ -1,0 +1,223 @@
+@charset 'utf-8';
+
+body {
+	background-color: #000;
+}
+
+.wrapper {
+	background-color: #fff;
+	width: 100%;
+	max-width: 1366px;
+	margin: 0 auto;
+}
+
+.title-section {
+	width: 100%;
+} 
+
+.header-page {
+	width: 100%;
+	height: 75px;
+	background-color: rgba(61, 11, 22, 0.9);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.wrap-logo {
+	margin-left: 10px;
+}
+
+.logo {
+	color: orange;
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+	transition: all .2s ease;
+}
+
+.logo:hover {
+	cursor: pointer;
+	color: #24d13e;
+}
+
+.navigation {
+	padding: 3px;
+}
+
+.header-page__ul {
+	margin: 0 3px;
+}
+
+.header-page__li {
+	list-style-type: none;
+}
+
+.header-page__link {
+	padding: 5px 8px;
+	font-family: 'Lato', sans-serif;
+	text-decoration: none;
+	font-size: 16px;
+	color: #d3edec;
+	transition: all .2s ease;
+}
+
+.header-page__link:hover {
+	cursor: pointer;
+	background-color: #ebf5ee;
+	color: #000;
+}
+
+.header-page__link:nth-child(2) {
+	margin: 0 5px;
+}
+
+.wrap-logout {
+	margin-right: 10px;
+}
+
+.log-in,
+.log-register {
+	background-color: transparent;
+	border: 2px solid orange;
+	border-radius: 5px;
+	padding: 5px 9px;
+	transition: all .2s ease;
+}
+
+.log-in:hover,
+.log-register:hover {
+	border-color: #24d13e;
+}
+
+.link-log-in,
+.link-register {
+	font-family: 'Lato', sans-serif;
+	text-decoration: none;
+	font-size: 13px;
+	color: #d3edec;
+	transition: all .2s ease;
+}
+
+.link-log-in:hover,
+.link-register:hover {
+	color: #fff;
+}
+
+.content-metabolism {
+	padding: 30px 10px 60px 10px;
+}
+
+.content-matabolism__wrap {
+	max-width: 70%;
+	margin: 30px auto 0 auto;
+}
+
+.content-metabolism__title,
+.content-metabolism__h3-title,
+.content-metabolism__text {
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+}
+
+.content-metabolism__title,
+.content-metabolism__h3-title {
+	margin: 15px 0;
+}
+
+.content-metabolism__title {
+	font-size: 25px;
+}
+
+.content-metabolism__h3-title {
+	font-size: 20px;
+}
+
+.content-metabolism__text {
+	margin-top: 20px;
+}
+
+.calc-metabolism {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background: url(../img/bg/bg_motosport.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.wrap-calc-metabolism-form {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.metabolism-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(40, 20, 20, 0.7);
+	border-radius: 15px;
+	width: 450px;
+	height: 340px;
+}
+
+.input-form {
+	margin: 8px 0;
+	width: 200px;
+	height: 40px;
+	border: none;
+	background: #fff;
+	transition: all .2s ease;
+}
+
+.input-form:focus {
+	box-shadow: inset 0 0 5px purple;
+}
+
+.input-form[placeholder] {
+	color: #000;
+	padding-left: 7px;
+	font-size: 12px;
+} 
+
+.form-wrap-btn {
+	margin-top: 10px;
+	display: flex;
+}
+
+.btn-form {
+	color: #000;
+	border: none;
+	width: 95px;
+	height: 40px;
+	font-size: 14px;
+}
+
+.reset {
+	border-bottom-right-radius: 45px;
+	border-top-right-radius: 45px;
+	background-color: red;
+	transition: all .2s ease;
+}
+
+.reset:hover {
+	cursor: pointer;
+	background-color: purple;
+	color: #fff;
+}
+
+.submit {
+	border-bottom-left-radius: 45px;
+	border-top-left-radius: 45px;
+	background-color: yellow;
+	transition: all .2s ease;
+}
+
+.submit:hover {
+	cursor: pointer;
+	background-color: orange;
+	color: #fff;
+}
