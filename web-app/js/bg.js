@@ -1,0 +1,1 @@
+document.getElementsByClassName('.calc-metabolism').style.backgroundImage = 'url(../img/bg/bg-run.jpg)';

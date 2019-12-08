@@ -1,0 +1,33 @@
+.up-text {
+	animation: up-text linear 1 .5s;
+}
+@keyframes up-text {
+	0% {
+		transform: rotate(-2deg);
+	}
+
+	50% {
+		transform: rotate(2deg);
+	}
+
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+.title {
+	animation: title linear 2 .2s;
+}
+@keyframes title {
+	0% {
+		transform: translateX(-5px);
+	}
+
+	50% {
+		transform: translateX(5px);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}

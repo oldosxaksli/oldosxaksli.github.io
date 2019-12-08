@@ -26,6 +26,7 @@ body {
 
 .wrap-logo {
 	margin-left: 10px;
+	padding: 5px;
 }
 
 .logo {
@@ -77,12 +78,32 @@ body {
 
 .log-in,
 .log-register {
+	position: relative;
+	overflow: hidden;
 	background-color: transparent;
 	border: 2px solid orange;
 	border-radius: 5px;
 	padding: 5px 9px;
 	transition: all .2s ease;
 }
+
+.log-in::before,
+.log-register::before {
+	transition: all .5s ease;
+	position: absolute;
+	content: "";
+	display: block;
+	background-color: #fff;
+	top: 0;
+	left: -40px;
+	width: 20px;
+	height: 40px;
+}
+
+.log-in:hover::before,
+.log-register:hover::before {
+	left: 100%;
+} 
 
 .log-in:hover,
 .log-register:hover {
@@ -134,13 +155,21 @@ body {
 
 .content-metabolism__text {
 	margin-top: 20px;
+	font-size: 18px;
+	line-height: 22px;
+	-webkit-touch-callout: none;
+  	-webkit-user-select: none;
+  	-khtml-user-select: none;
+  	-moz-user-select: none;
+  	-ms-user-select: none;
+  	user-select: none; 
 }
 
 .calc-metabolism {
 	position: relative;
 	width: 100%;
 	height: 100vh;
-	background: url(../img/bg/bg_motosport.jpg);
+	background-image: url(../img/bg/bg-velosport.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -218,6 +247,6 @@ body {
 
 .submit:hover {
 	cursor: pointer;
-	background-color: orange;
+	background-color: blue;
 	color: #fff;
 }
