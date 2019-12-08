@@ -26,8 +26,7 @@
 					</ul>
 				</nav>
 				<div class="wrap-logout">
-					<button class="log-in"><a href="#" class="link-log-in">Войти</a></button>
-					<button class="log-register"><a href="#" class="link-register">Регистрация</a></button>
+					<button class="log-in"><a href="html/auth.php" class="link-log-in">Авторизация</a></button>
 				</div>
 			</header>
 			<article class="content-metabolism">
@@ -57,54 +56,51 @@
 
 		<section class="calc-metabolism">
 			<div class="wrap-calc-metabolism-form">
-
-				<form action="" class="metabolism-form">
-
+				<form action="" class="metabolism-form form">
+					<progress class="progress" max="100" value="0"></progress>
 					<input class="input-form input-age" list="age" type="number" 
 					min="10" max="120" step="1" maxlength="3" pattern="[0-9]{,3}" 
-					autocomplete="on" placeholder="Ваш возраст"><br>
+					autocomplete="on" placeholder="Ваш возраст">
 					<datalist id="age">
-						<option value="15">15</option>
-						<option value="20">20</option>
-						<option value="25">25</option>
-						<option value="30">30</option>
-						<option value="35">35</option>
+						<option value="15"></option>
+						<option value="20"></option>
+						<option value="25"></option>
+						<option value="30"></option>
+						<option value="35"></option>
 					</datalist>
 
 					<input class="input-form input-height" list="height" type="number" 
 					min="140" max="210" step="1" maxlength="3" pattern="[0-9]{,3}" 
-					autocomplete="on" placeholder="Ваш рост"><br>
+					autocomplete="on" placeholder="Ваш рост">
 					<datalist id="height">
-						<option value="150">150</option>
-						<option value="175">175</option>
-						<option value="180">180</option>
-						<option value="185">185</option>
-						<option value="190">190</option>
+						<option value="150"></option>
+						<option value="175"></option>
+						<option value="180"></option>
+						<option value="185"></option>
+						<option value="190"></option>
 					</datalist>
 
 					<input class="input-form input-massa" list="massa" type="number" 
 					min="40" max="200" step="1" maxlength="3"pattern="[0-9]{,3}" 
-					autocomplete="on" placeholder="Ваш вес"><br>
+					autocomplete="on" placeholder="Ваш вес">
 					<datalist id="massa">
-						<option value="65">65</option>
-						<option value="70">75</option>
-						<option value="80">80</option>
-						<option value="85">85</option>
-						<option value="90">95</option>
+						<option value="65"></option>
+						<option value="70"></option>
+						<option value="80"></option>
+						<option value="85"></option>
+						<option value="90"></option>
 					</datalist>
 
-					<select class="input-form input-select" name="" id=""><br>
+					<select class="input-form input-select" name="" id="">
 						<option value="1">Мужчина</option>
 						<option value="0">Женщина</option>
-					</select><br>
+					</select>
 					
 					<div class="form-wrap-btn">
 						<input class="btn-form submit" type="submit" value="Расчитать">
 						<input class="btn-form reset" type="reset" value="Очистить">
 					</div>
-					
 				</form>
-
 			</div>
 		</section>
 	</div>

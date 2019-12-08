@@ -81,8 +81,7 @@ body {
 	margin-right: 10px;
 }
 
-.log-in,
-.log-register {
+.log-in {
 	position: relative;
 	overflow: hidden;
 	background-color: transparent;
@@ -93,8 +92,7 @@ body {
 	transition: all .2s ease;
 }
 
-.log-in::before,
-.log-register::before {
+.log-in::before {
 	-webkit-transition: all .5s ease;
 	transition: all .5s ease;
 	position: absolute;
@@ -107,18 +105,15 @@ body {
 	height: 40px;
 }
 
-.log-in:hover::before,
-.log-register:hover::before {
+.log-in:hover::before {
 	left: 100%;
 } 
 
-.log-in:hover,
-.log-register:hover {
+.log-in:hover {
 	border-color: #24d13e;
 }
 
-.link-log-in,
-.link-register {
+.link-log-in {
 	font-family: 'Lato', sans-serif;
 	text-decoration: none;
 	font-size: 13px;
@@ -127,8 +122,7 @@ body {
 	transition: all .2s ease;
 }
 
-.link-log-in:hover,
-.link-register:hover {
+.link-log-in:hover {
 	color: #fff;
 }
 
@@ -203,7 +197,18 @@ body {
 	background-color: rgba(40, 20, 20, 0.7);
 	border-radius: 15px;
 	width: 450px;
-	height: 340px;
+	height: 350px;
+}
+
+.progress {
+	background-color: silver;
+	margin-bottom: 8px;
+	color: pink;
+	overflow: hidden;
+ 	border: 0;
+ 	width: 200px;
+  	height: 20px;
+  	border-radius: 10px;
 }
 
 .input-form {
@@ -214,6 +219,10 @@ body {
 	background: #fff;
 	-webkit-transition: all .2s ease;
 	transition: all .2s ease;
+}
+
+.input-form:hover {
+	opacity: .9;
 }
 
 .input-form:focus {
