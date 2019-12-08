@@ -5,6 +5,14 @@ let inputHeight = document.querySelector(".input-height");
 let inputMassa = document.querySelector(".input-massa");
 let inputSelect = document.querySelector(".input-select");
 let submit = document.querySelector(".submit");
+let bgMetabolism = document.querySelector(".calc-metabolism");
+let listBgImages = [
+	"../img/bg/bg-run2.jpg",
+	"../img/bg/bg_motosport.jpg",
+	"../img/bg/bg-velosport.jpg"	
+];
+
+bgMetabolism.style.backgroundImage = `url(${listBgImages[1]})`;
 
 for (let i = 0; i < title.length; i++) {
 	title[i].addEventListener('mouseover', () => {
