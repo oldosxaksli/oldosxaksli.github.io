@@ -43,19 +43,35 @@
 	</style>
 
 	<script>
-		setInterval(()  => {
-			let date = new Date;
-			let hours = date.getHours();
-			let minutes = date.getMinutes();
-			let seconds = date.getSeconds();
-			let h = document.querySelector(".hours");
-			let m = document.querySelector(".minutes");
-			let s = document.querySelector(".seconds");
+		let h = document.querySelector(".hours");
+		let m = document.querySelector(".minutes");
+		let s = document.querySelector(".seconds");
 
-			h.innerHTML = hours + ':';
-			m.innerHTML = minutes + ':';
+
+
+		function clocking() {
+					let date = new Date;
+		let hours = date.getHours();
+		let minutes = date.getMinutes();
+		let seconds = date.getSeconds().toString();
+			h.innerHTML = hours;
+			m.innerHTML = minutes;
 			s.innerHTML = seconds;
-		},1000);
+
+			// if (h.length < 2) {
+			// 	h.textContent = 0 + hours;
+			// }
+
+			// if (m.length < 2) {
+			// 	m.textContent = 0 + minutes;
+			// }
+
+			// if (s.length < 2) {
+			// 	s.textContent = 0 + seconds;
+			// }
+		}
+
+		setInterval(clocking, 900);
 	</script>
 </body>
 </html>
