@@ -31,7 +31,7 @@ for (let i = 0; i < text.length; i++) {
 }
 
 function progressBar() {
-	if (inputAge.value == "") {
+	if (inputAge.value == "" || inputAge.value == " ") {
 		progress.value = "0";
 	}
 
@@ -51,10 +51,129 @@ setInterval(progressBar, 1000);
 
 forma.addEventListener('submit', (event) => {
 	event.preventDefault();
+
+	let maffinMan = 0;
+	let maffinWoman = 0;
+
+	if (inputSelect.value == '1') {
+		maffinMan = (10 * inputMassa.value) + 6.25 * (inputHeight.value) - (5 * inputAge.value) + 5;
+	}
+
+	if (inputSelect.value == '0') {
+		maffinWoman = (10 * inputMassa.value) + (6.25 * inputHeight.value) - (5 * inputAge.value) - 161;
+	}
+
+	let tkachenkoMan = 0;
+	let tkachenkoWoman = 0;
+
+	if (inputSelect.value == '1') {
+		if (inputAge.value >= 10 && inputAge.value <= 17) {
+			tkachenkoMan = (16.6 * inputMassa.value) + 119 + 572;
+		}
+
+		else if (inputAge.value >= 18 && inputAge.value <= 30) {
+			tkachenkoMan = (15.4 * inputMassa.value) - (27 * (inputHeight.value / 100)) + 717;
+		}
+
+		else if (inputAge.value >= 31 && inputAge.value <= 60) {
+			tkachenkoMan = (11.3 * inputMassa.value) - (16 * (inputHeight.value / 100)) + 901;
+		}
+
+		else {
+			tkachenkoMan = (8.8 * inputMassa.value)	- (1128 * (inputHeight.value / 100)) - 1071;
+		}
+	}
+
+	if (inputSelect.value == '0') {
+		if (inputAge.value >= 10 && inputAge.value <= 17) {
+			tkachenkoWoman = (7.4 * inputMassa.value) + (482 * (inputHeight.value / 100)) + 271;
+		}
+
+		else if (inputAge.value >= 18 && inputAge.value <= 30) {
+			tkachenkoWoman = (13.3 * inputMassa.value) - (334 * (inputHeight.value / 100)) + 35;
+		}
+
+		else if (inputAge.value >= 31 && inputAge.value <= 60) {
+			tkachenkoWoman = (8.7 * inputMassa.value) - (25 * (inputHeight.value / 100)) + 865;
+		}
+
+		else {
+			tkachenkoWoman = (9.2 * inputMassa.value) - (637 * (inputHeight.value / 100)) - 302;
+		}
+	}
+
+	let harrisMan = 0;
+	let harrisWoman = 0;
+
+	if (inputSelect.value == '1') {
+		harrisMan = 66 + (13.8 * inputMassa.value) + (5 * inputHeight.value) - (6.8 * inputAge.value);
+	}
+
+	if (inputSelect.value == '0') {
+		harrisWoman = 665 + (9.5 * inputMassa.value) + (1.9 * inputHeight.value) - (4.7 * inputAge.value);
+	}
+
+	let kolemanMan = 0;
+	let kolemanWoman = 0; 
+
+	if (inputSelect.value == '1') {
+		if (inputAge.value >= 10 && inputAge.value <= 17) {
+			kolemanMan = (17.5 * inputMassa.value) + 651;
+		}
+
+		else if (inputAge.value >= 18 && inputAge.value <= 29) {
+			kolemanMan = (15.3 * inputMassa.value) + 679;
+		}
+
+		else if (inputAge.value >= 30 && inputAge.value <= 60) {
+			kolemanMan = (11.6 * inputMassa.value) + 879;
+		}
+
+		else {
+			kolemanMan = (13.5 * inputMassa.value) + 487;
+		}
+	}
+
+	if (inputSelect.value == '0') {
+		if (inputAge.value >= 10 && inputAge.value <= 17) {
+			kolemanWoman = (12.2 * inputMassa.value) + 746;
+		}
+
+		else if (inputAge.value >= 18 && inputAge.value <= 29) {
+			kolemanWoman = (14.7 * inputMassa.value) + 496;
+		}
+
+		else if (inputAge.value >= 30 && inputAge.value <= 60) {
+			kolemanWoman = (8.7 * inputMassa.value) + 829;
+		}
+
+		else {
+			kolemanWoman = (10.5 * inputMassa.value) + 596;
+		}
+	}
+
+	let resultList = [
+		"Маффин мужчина" + " " + maffinMan.toFixed(),
+		"Мафиин женщина" + " " + maffinWoman.toFixed(),
+		"Ткаченко мужчина" + " " + tkachenkoMan.toFixed(),
+		"Ткаченко женщина" + " " + tkachenkoWoman.toFixed(),
+		"Харрис мужчина" + " " + harrisMan.toFixed(),
+		"Харрис женщина" + " " + harrisWoman.toFixed(),
+		"Колеман мужчина" + " " + kolemanMan.toFixed(),
+		"Колеман женщина" + " " + kolemanWoman.toFixed()
+	];
+
+	let result = document.querySelector(".result");
+	result.style.display = "block";
+
+	for (let i = 0; i < resultList.length; i++) {
+		result.innerHTML = resultList[i];
+	}
 	
+	setTimeout(() => {
+		result.style.display = "none";
+	}, 4000);
 });
-
-
 
 // let listBgImages = ["../img/bg/bg-run2.jpg", "../img/bg/bg_motosport.jpg", "../img/bg/bg-velosport.jpg"	];
 // bgMetabolism.style.backgroundImage = `url(${listBgImages[1]})`;
