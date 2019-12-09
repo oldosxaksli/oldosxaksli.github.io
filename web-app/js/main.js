@@ -51,7 +51,7 @@ setInterval(progressBar, 1000);
 
 forma.addEventListener('submit', (event) => {
 	event.preventDefault();
-	console.log("send");
+	
 });
 
 
