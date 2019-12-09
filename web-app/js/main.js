@@ -9,6 +9,15 @@ let inputSelect = document.querySelector(".input-select");
 let btn = document.querySelector(".submit");
 let forma = document.querySelector(".form");
 
+
+let listBgImages = [
+	"../img/bg/bg-run2.jpg",
+	"../img/bg/bg_motosport.jpg",
+	"../img/bg/bg-velosport.jpg"
+];
+
+// bgMetabolism.style.backgroundImage = `url(${listBgImages[1]})`;
+
 for (let i = 0; i < title.length; i++) {
 	title[i].addEventListener('mouseover', () => {
 	title[i].classList.add("title"); 
@@ -152,28 +161,28 @@ forma.addEventListener('submit', (event) => {
 		}
 	}
 
-	let resultList = [
-		"Маффин мужчина" + " " + maffinMan.toFixed(),
-		"Мафиин женщина" + " " + maffinWoman.toFixed(),
-		"Ткаченко мужчина" + " " + tkachenkoMan.toFixed(),
-		"Ткаченко женщина" + " " + tkachenkoWoman.toFixed(),
-		"Харрис мужчина" + " " + harrisMan.toFixed(),
-		"Харрис женщина" + " " + harrisWoman.toFixed(),
-		"Колеман мужчина" + " " + kolemanMan.toFixed(),
-		"Колеман женщина" + " " + kolemanWoman.toFixed()
-	];
+let resultList = [
+	"Маффин мужчина" + " " + maffinMan.toFixed(),
+	"Мафиин женщина" + " " + maffinWoman.toFixed(),
+	"Ткаченко мужчина" + " " + tkachenkoMan.toFixed(),
+	"Ткаченко женщина" + " " + tkachenkoWoman.toFixed(),
+	"Харрис мужчина" + " " + harrisMan.toFixed(),
+	"Харрис женщина" + " " + harrisWoman.toFixed(),
+	"Колеман мужчина" + " " + kolemanMan.toFixed(),
+	"Колеман женщина" + " " + kolemanWoman.toFixed()
+];
 
-	let result = document.querySelector(".result");
-	result.style.display = "block";
+let result = document.querySelector(".result");
+result.style.zIndex = "100";
+result.style.display = "block";
+result.style.opacity = "1";
 
-	for (let i = 0; i < resultList.length; i++) {
-		result.innerHTML = resultList[i];
-	}
-	
-	setTimeout(() => {
-		result.style.display = "none";
-	}, 4000);
+for (let i = 0; i < resultList.length; i++) {
+	result.textContent = resultList[i];
+}
+
+setTimeout(() => {
+	result.style.opacity = "0";
+	result.style.zIndex = "-100";
+}, 4000);
 });
-
-// let listBgImages = ["../img/bg/bg-run2.jpg", "../img/bg/bg_motosport.jpg", "../img/bg/bg-velosport.jpg"	];
-// bgMetabolism.style.backgroundImage = `url(${listBgImages[1]})`;

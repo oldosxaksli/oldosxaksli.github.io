@@ -278,13 +278,55 @@ body {
 }
 
 .result {
-	display: none;
+	overflow: hidden;
+	opacity: 0;
 	position: absolute;
-	z-index: 100;
+	z-index: -100;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 400px;
 	height: 250px;
-	background-color: red;
+	line-height: 250px;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	color: #fff;
+	border-radius: 5px;
+	background-color: #438c76;
+	transition: all .5s ease;
 }
+
+/*.result::before {
+	position: absolute;
+	display: block;
+	background-color: #000;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50%;
+	transition: all .5s ease;
+}
+
+.result:hover::before {
+	top: -50%;
+	cursor: pointer;
+}
+
+.result::after {
+	position: absolute;
+	display: block;
+	background-color: red;
+	content: "";
+	top: 50%;
+	left: 0;
+	width: 100%;
+	height: 50%;
+	transition: all .5s ease;
+}
+
+.result:hover::after {
+	top: 100%;
+	cursor: pointer;
+}*/
