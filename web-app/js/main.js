@@ -8,7 +8,7 @@ let inputMassa = document.querySelector(".input-massa");
 let inputSelect = document.querySelector(".input-select");
 let btn = document.querySelector(".submit");
 let forma = document.querySelector(".form");
-
+let inputForm = document.querySelectorAll(".input-form");
 
 let listBgImages = [
 	"../img/bg/bg-run2.jpg",
@@ -56,110 +56,112 @@ function progressBar() {
 		progress.value = "100";
 	}
 }
+
 setInterval(progressBar, 1000);
 
 forma.addEventListener('submit', (event) => {
 	event.preventDefault();
 
-	let maffinMan = 0;
-	let maffinWoman = 0;
+let maffinMan = 0;
+let maffinWoman = 0;
 
-	if (inputSelect.value == '1') {
-		maffinMan = (10 * inputMassa.value) + 6.25 * (inputHeight.value) - (5 * inputAge.value) + 5;
+if (inputSelect.value == '1') {
+	maffinMan = (10 * inputMassa.value) + 6.25 * (inputHeight.value) - (5 * inputAge.value) + 5;
+}
+
+if (inputSelect.value == '0') {
+	maffinWoman = (10 * inputMassa.value) + (6.25 * inputHeight.value) - (5 * inputAge.value) - 161;
+}
+
+let tkachenkoMan = 0;
+let tkachenkoWoman = 0;
+
+if (inputSelect.value == '1') {
+	if (inputAge.value >= 10 && inputAge.value <= 17) {
+		tkachenkoMan = (16.6 * inputMassa.value) + 119 + 572;
 	}
 
-	if (inputSelect.value == '0') {
-		maffinWoman = (10 * inputMassa.value) + (6.25 * inputHeight.value) - (5 * inputAge.value) - 161;
+	else if (inputAge.value >= 18 && inputAge.value <= 30) {
+		tkachenkoMan = (15.4 * inputMassa.value) - (27 * (inputHeight.value / 100)) + 717;
 	}
 
-	let tkachenkoMan = 0;
-	let tkachenkoWoman = 0;
-
-	if (inputSelect.value == '1') {
-		if (inputAge.value >= 10 && inputAge.value <= 17) {
-			tkachenkoMan = (16.6 * inputMassa.value) + 119 + 572;
-		}
-
-		else if (inputAge.value >= 18 && inputAge.value <= 30) {
-			tkachenkoMan = (15.4 * inputMassa.value) - (27 * (inputHeight.value / 100)) + 717;
-		}
-
-		else if (inputAge.value >= 31 && inputAge.value <= 60) {
-			tkachenkoMan = (11.3 * inputMassa.value) - (16 * (inputHeight.value / 100)) + 901;
-		}
-
-		else {
-			tkachenkoMan = (8.8 * inputMassa.value)	- (1128 * (inputHeight.value / 100)) - 1071;
-		}
+	else if (inputAge.value >= 31 && inputAge.value <= 60) {
+		tkachenkoMan = (11.3 * inputMassa.value) - (16 * (inputHeight.value / 100)) + 901;
 	}
 
-	if (inputSelect.value == '0') {
-		if (inputAge.value >= 10 && inputAge.value <= 17) {
-			tkachenkoWoman = (7.4 * inputMassa.value) + (482 * (inputHeight.value / 100)) + 271;
-		}
+	else {
+		tkachenkoMan = (8.8 * inputMassa.value)	- (1128 * (inputHeight.value / 100)) - 1071;
+	}
+}
 
-		else if (inputAge.value >= 18 && inputAge.value <= 30) {
-			tkachenkoWoman = (13.3 * inputMassa.value) - (334 * (inputHeight.value / 100)) + 35;
-		}
-
-		else if (inputAge.value >= 31 && inputAge.value <= 60) {
-			tkachenkoWoman = (8.7 * inputMassa.value) - (25 * (inputHeight.value / 100)) + 865;
-		}
-
-		else {
-			tkachenkoWoman = (9.2 * inputMassa.value) - (637 * (inputHeight.value / 100)) - 302;
-		}
+if (inputSelect.value == '0') {
+	if (inputAge.value >= 10 && inputAge.value <= 17) {
+		tkachenkoWoman = (7.4 * inputMassa.value) + (482 * (inputHeight.value / 100)) + 271;
 	}
 
-	let harrisMan = 0;
-	let harrisWoman = 0;
-
-	if (inputSelect.value == '1') {
-		harrisMan = 66 + (13.8 * inputMassa.value) + (5 * inputHeight.value) - (6.8 * inputAge.value);
+	else if (inputAge.value >= 18 && inputAge.value <= 30) {
+		tkachenkoWoman = (13.3 * inputMassa.value) - (334 * (inputHeight.value / 100)) + 35;
 	}
 
-	if (inputSelect.value == '0') {
-		harrisWoman = 665 + (9.5 * inputMassa.value) + (1.9 * inputHeight.value) - (4.7 * inputAge.value);
+	else if (inputAge.value >= 31 && inputAge.value <= 60) {
+		tkachenkoWoman = (8.7 * inputMassa.value) - (25 * (inputHeight.value / 100)) + 865;
 	}
 
-	let kolemanMan = 0;
-	let kolemanWoman = 0; 
+	else {
+		tkachenkoWoman = (9.2 * inputMassa.value) - (637 * (inputHeight.value / 100)) - 302;
+	}
+}
 
-	if (inputSelect.value == '1') {
-		if (inputAge.value >= 10 && inputAge.value <= 17) {
-			kolemanMan = (17.5 * inputMassa.value) + 651;
-		}
+let harrisMan = 0;
+let harrisWoman = 0;
 
-		else if (inputAge.value >= 18 && inputAge.value <= 29) {
-			kolemanMan = (15.3 * inputMassa.value) + 679;
-		}
+if (inputSelect.value == '1') {
+	harrisMan = 66 + (13.8 * inputMassa.value) + (5 * inputHeight.value) - (6.8 * inputAge.value);
+}
 
-		else if (inputAge.value >= 30 && inputAge.value <= 60) {
-			kolemanMan = (11.6 * inputMassa.value) + 879;
-		}
+if (inputSelect.value == '0') {
+	harrisWoman = 665 + (9.5 * inputMassa.value) + (1.9 * inputHeight.value) - (4.7 * inputAge.value);
+}
 
-		else {
-			kolemanMan = (13.5 * inputMassa.value) + 487;
-		}
+let kolemanMan = 0;
+let kolemanWoman = 0; 
+
+if (inputSelect.value == '1') {
+	if (inputAge.value >= 10 && inputAge.value <= 17) {
+		kolemanMan = (17.5 * inputMassa.value) + 651;
 	}
 
-	if (inputSelect.value == '0') {
-		if (inputAge.value >= 10 && inputAge.value <= 17) {
-			kolemanWoman = (12.2 * inputMassa.value) + 746;
-		}
-
-		else if (inputAge.value >= 18 && inputAge.value <= 29) {
-			kolemanWoman = (14.7 * inputMassa.value) + 496;
-		}
-
-		else if (inputAge.value >= 30 && inputAge.value <= 60) {
-			kolemanWoman = (8.7 * inputMassa.value) + 829;
-		}
-
-		else {
-			kolemanWoman = (10.5 * inputMassa.value) + 596;
-		}
+	else if (inputAge.value >= 18 && inputAge.value <= 29) {
+		kolemanMan = (15.3 * inputMassa.value) + 679;
 	}
+
+	else if (inputAge.value >= 30 && inputAge.value <= 60) {
+		kolemanMan = (11.6 * inputMassa.value) + 879;
+	}
+
+	else {
+		kolemanMan = (13.5 * inputMassa.value) + 487;
+	}
+}
+
+if (inputSelect.value == '0') {
+	if (inputAge.value >= 10 && inputAge.value <= 17) {
+		kolemanWoman = (12.2 * inputMassa.value) + 746;
+	}
+
+	else if (inputAge.value >= 18 && inputAge.value <= 29) {
+		kolemanWoman = (14.7 * inputMassa.value) + 496;
+	}
+
+	else if (inputAge.value >= 30 && inputAge.value <= 60) {
+		kolemanWoman = (8.7 * inputMassa.value) + 829;
+	}
+
+	else {
+		kolemanWoman = (10.5 * inputMassa.value) + 596;
+	}
+}
+
 //innerResult содержит 8 элементов span
 let innerResult = document.querySelectorAll(".inner-res");
 
@@ -185,7 +187,6 @@ let result = document.querySelector(".result");
 result.style.zIndex = "100";
 result.style.display = "block";
 result.style.opacity = "1";
-
 
 result.onclick = (event) => {
 	result.style.opacity = "0";
