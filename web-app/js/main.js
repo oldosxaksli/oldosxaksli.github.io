@@ -160,29 +160,35 @@ forma.addEventListener('submit', (event) => {
 			kolemanWoman = (10.5 * inputMassa.value) + 596;
 		}
 	}
+//innerResult содержит 8 элементов span
+let innerResult = document.querySelectorAll(".inner-res");
 
 let resultList = [
-	"Маффин мужчина" + " " + maffinMan.toFixed(),
-	"Мафиин женщина" + " " + maffinWoman.toFixed(),
-	"Ткаченко мужчина" + " " + tkachenkoMan.toFixed(),
-	"Ткаченко женщина" + " " + tkachenkoWoman.toFixed(),
-	"Харрис мужчина" + " " + harrisMan.toFixed(),
-	"Харрис женщина" + " " + harrisWoman.toFixed(),
-	"Колеман мужчина" + " " + kolemanMan.toFixed(),
-	"Колеман женщина" + " " + kolemanWoman.toFixed()
+	"По формуле Маффина: " + maffinMan.toFixed(),
+	"По формуле Маффина: " + maffinWoman.toFixed(),
+	"По формуле Ткаченко: " + tkachenkoMan.toFixed(),
+	"По формуле Ткаченко: " + tkachenkoWoman.toFixed(),
+	"По формуле Харриса: " + harrisMan.toFixed(),
+	"По формуле Харриса: " + harrisWoman.toFixed(),
+	"По формуле Колмена: " + kolemanMan.toFixed(),
+	"По формуле Колмена: " + kolemanWoman.toFixed()
 ];
+
+let index = 0;
+
+for (let el = 0; el < innerResult.length; el++) {
+	index++;
+	innerResult[el].textContent = resultList[index] + " калорий";
+}
 
 let result = document.querySelector(".result");
 result.style.zIndex = "100";
 result.style.display = "block";
 result.style.opacity = "1";
 
-for (let i = 0; i < resultList.length; i++) {
-	result.textContent = resultList[i];
-}
 
-setTimeout(() => {
+result.onclick = (event) => {
 	result.style.opacity = "0";
 	result.style.zIndex = "-100";
-}, 4000);
+};
 });
