@@ -9,14 +9,19 @@ let inputSelect = document.querySelector(".input-select");
 let btn = document.querySelector(".submit");
 let forma = document.querySelector(".form");
 let inputForm = document.querySelectorAll(".input-form");
+let result = document.querySelector(".result");
 
 let listBgImages = [
-	"../img/bg/bg-run2.jpg",
-	"../img/bg/bg_motosport.jpg",
-	"../img/bg/bg-velosport.jpg"
+	'img/bg/bg-run2.jpg',
+	'img/bg/bg_motosport.jpg',
+	'img/bg/bg-velosport.jpg'
 ];
 
-// bgMetabolism.style.backgroundImage = `url(${listBgImages[1]})`;
+setInterval(() => {
+	for (let bgIndex = 0; bgIndex < listBgImages.length; bgIndex++) {
+		bgMetabolism.style.backgroundImage = `url(${listBgImages[bgIndex]})`;
+	}
+}, 1000);
 
 for (let i = 0; i < title.length; i++) {
 	title[i].addEventListener('mouseover', () => {
@@ -179,17 +184,16 @@ let resultList = [
 let index = 0;
 
 for (let el = 0; el < innerResult.length; el++) {
-	index++;
 	innerResult[el].textContent = resultList[index] + " калорий";
+	index++;
 }
 
-let result = document.querySelector(".result");
 result.style.zIndex = "100";
 result.style.display = "block";
 result.style.opacity = "1";
+});
 
 result.onclick = (event) => {
 	result.style.opacity = "0";
 	result.style.zIndex = "-100";
-};
-});
+}
