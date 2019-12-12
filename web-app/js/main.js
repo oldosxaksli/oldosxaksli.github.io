@@ -185,14 +185,24 @@ let resultList = [
 	kolemanWoman.toFixed()
 ];
 
-// let index = 0;
+//Массив с значениями для описание хранящегося результата в массиве resultList 
+let resultText = [
+	"По формуле Маффина для мужчины ",
+	"По формуле Маффина для женщины ",
+	"По формуле Ткаченко для мужчины ",
+	"По формуле Ткаченко для женщины ",
+	"По формуле Харриса для мужчины ",
+	"По формуле Харриса для женщины ",
+	"По формуле Колмена для мужчины ",
+	"По формуле Колмена для женщины "
+];
 
 //Если переменная содержит в себе 0 то пропускать ее и не записывать в тег.
 for (let el = 0; el < innerResult.length; el++) {
-	if (resultList[el] == 0) {
+	if (resultList[el] == '0') {
 		continue;
 	} else {
-		innerResult[el].textContent = resultList[el] + " калорий";
+		innerResult[el].textContent = resultText[el] + resultList[el] + " калорий";
 	}
 }
 
