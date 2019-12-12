@@ -173,6 +173,7 @@ if (inputSelect.value == '0') {
 //innerResult содержит 8 элементов span
 let innerResult = document.querySelectorAll(".inner-res");
 
+//Массив с перемеными что хранят результат вычислений по форумулам
 let resultList = [
 	maffinMan.toFixed(),
 	maffinWoman.toFixed(),
@@ -184,8 +185,9 @@ let resultList = [
 	kolemanWoman.toFixed()
 ];
 
-let index = 0;
+// let index = 0;
 
+//Если переменная содержит в себе 0 то пропускать ее и не записывать в тег.
 for (let el = 0; el < innerResult.length; el++) {
 	if (resultList[el] == 0) {
 		continue;
