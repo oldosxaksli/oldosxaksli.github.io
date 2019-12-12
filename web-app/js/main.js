@@ -8,21 +8,21 @@ let inputMassa = document.querySelector(".input-massa");
 let inputSelect = document.querySelector(".input-select");
 let btn = document.querySelector(".submit");
 let forma = document.querySelector(".form");
-let inputForm = document.querySelectorAll(".input-form");
 let result = document.querySelector(".result");
 
-let listBgImages = [
-	'img/bg/bg-run2.jpg',
-	'img/bg/bg_motosport.jpg',
-	'img/bg/bg-velosport.jpg'
-];
+// let listBgImages = [
+// 	'img/bg/bg-run2.jpg',
+// 	'img/bg/bg_motosport.jpg',
+// 	'img/bg/bg-velosport.jpg'
+// ];
 
-setInterval(() => {
-	for (let bgIndex = 0; bgIndex < listBgImages.length; bgIndex++) {
-		bgMetabolism.style.backgroundImage = `url(${listBgImages[bgIndex]})`;
-	}
-}, 1000);
+// setInterval(() => {
+// 	for (let bgIndex = 0; bgIndex < listBgImages.length; bgIndex++) {
+// 		bgMetabolism.style.backgroundImage = `url(${listBgImages[bgIndex]})`;
+// 	}
+// }, 1000);
 
+//Работа событий для текста
 for (let i = 0; i < title.length; i++) {
 	title[i].addEventListener('mouseover', () => {
 	title[i].classList.add("title"); 
@@ -44,6 +44,7 @@ for (let i = 0; i < text.length; i++) {
 	});
 }
 
+//Функция для работы прогресс-бара
 function progressBar() {
 	if (inputAge.value == "" || inputAge.value == " ") {
 		progress.value = "0";
@@ -64,6 +65,7 @@ function progressBar() {
 
 setInterval(progressBar, 1000);
 
+//Обработка формы
 forma.addEventListener('submit', (event) => {
 	event.preventDefault();
 
@@ -71,6 +73,7 @@ let maffinMan = 0;
 let maffinWoman = 0;
 
 if (inputSelect.value == '1') {
+
 	maffinMan = (10 * inputMassa.value) + 6.25 * (inputHeight.value) - (5 * inputAge.value) + 5;
 }
 
@@ -171,28 +174,33 @@ if (inputSelect.value == '0') {
 let innerResult = document.querySelectorAll(".inner-res");
 
 let resultList = [
-	"По формуле Маффина: " + maffinMan.toFixed(),
-	"По формуле Маффина: " + maffinWoman.toFixed(),
-	"По формуле Ткаченко: " + tkachenkoMan.toFixed(),
-	"По формуле Ткаченко: " + tkachenkoWoman.toFixed(),
-	"По формуле Харриса: " + harrisMan.toFixed(),
-	"По формуле Харриса: " + harrisWoman.toFixed(),
-	"По формуле Колмена: " + kolemanMan.toFixed(),
-	"По формуле Колмена: " + kolemanWoman.toFixed()
+	maffinMan.toFixed(),
+	maffinWoman.toFixed(),
+	tkachenkoMan.toFixed(),
+	tkachenkoWoman.toFixed(),
+	harrisMan.toFixed(),
+	harrisWoman.toFixed(),
+	kolemanMan.toFixed(),
+	kolemanWoman.toFixed()
 ];
 
 let index = 0;
 
 for (let el = 0; el < innerResult.length; el++) {
-	innerResult[el].textContent = resultList[index] + " калорий";
-	index++;
+	if (resultList[el] == 0) {
+		continue;
+	} else {
+		innerResult[el].textContent = resultList[el] + " калорий";
+	}
 }
 
+//Появление блока с результатом 
 result.style.zIndex = "100";
 result.style.display = "block";
 result.style.opacity = "1";
 });
 
+//Закрыть блок
 result.onclick = (event) => {
 	result.style.opacity = "0";
 	result.style.zIndex = "-100";
