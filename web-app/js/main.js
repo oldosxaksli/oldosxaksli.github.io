@@ -63,26 +63,29 @@ function progressBar() {
 	}
 }
 
-setInterval(progressBar, 1000);
+setInterval(progressBar, 500);
 
 //Обработка формы
 forma.addEventListener('submit', (event) => {
 	event.preventDefault();
 
+
+//Формула Маффина
 let maffinMan = 0;
-let maffinWoman = 0;
 
 if (inputSelect.value == '1') {
 
 	maffinMan = (10 * inputMassa.value) + 6.25 * (inputHeight.value) - (5 * inputAge.value) + 5;
 }
 
+let maffinWoman = 0;
+
 if (inputSelect.value == '0') {
 	maffinWoman = (10 * inputMassa.value) + (6.25 * inputHeight.value) - (5 * inputAge.value) - 161;
 }
 
+//Формула Ткаченко
 let tkachenkoMan = 0;
-let tkachenkoWoman = 0;
 
 if (inputSelect.value == '1') {
 	if (inputAge.value >= 10 && inputAge.value <= 17) {
@@ -102,6 +105,8 @@ if (inputSelect.value == '1') {
 	}
 }
 
+let tkachenkoWoman = 0;
+
 if (inputSelect.value == '0') {
 	if (inputAge.value >= 10 && inputAge.value <= 17) {
 		tkachenkoWoman = (7.4 * inputMassa.value) + (482 * (inputHeight.value / 100)) + 271;
@@ -120,19 +125,22 @@ if (inputSelect.value == '0') {
 	}
 }
 
+//Формула Харриса
 let harrisMan = 0;
-let harrisWoman = 0;
 
 if (inputSelect.value == '1') {
 	harrisMan = 66 + (13.8 * inputMassa.value) + (5 * inputHeight.value) - (6.8 * inputAge.value);
 }
 
+let harrisWoman = 0;
+
 if (inputSelect.value == '0') {
 	harrisWoman = 665 + (9.5 * inputMassa.value) + (1.9 * inputHeight.value) - (4.7 * inputAge.value);
 }
 
+
+//Формула Колемана
 let kolemanMan = 0;
-let kolemanWoman = 0; 
 
 if (inputSelect.value == '1') {
 	if (inputAge.value >= 10 && inputAge.value <= 17) {
@@ -151,6 +159,8 @@ if (inputSelect.value == '1') {
 		kolemanMan = (13.5 * inputMassa.value) + 487;
 	}
 }
+
+let kolemanWoman = 0; 
 
 if (inputSelect.value == '0') {
 	if (inputAge.value >= 10 && inputAge.value <= 17) {
