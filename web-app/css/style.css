@@ -286,9 +286,6 @@ body {
 }
 
 .result {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
 	overflow: hidden;
 	opacity: 0;
 	position: absolute;
@@ -308,35 +305,69 @@ body {
 }
 
 .inner-res:nth-child(2) {
-	margin-top: 88px;
+	margin-top: 120px;
 }
 
 .inner-res {
+	position: relative;
+	padding-right: 90px;
 	margin-top: 5px;
-	text-align: center;
+	text-align: right;
 	font-size: 14px;
 	font-family: 'Lato', sans-serif;
 	color: #fff;
 }
 
+.inner-res:nth-child(2)::after {
+	position: absolute;
+	display: block;
+	content: "По формуле Маффина:";
+	left: 15%;
+	top: 0px;
+}
+
+.inner-res:nth-child(3)::after {
+	position: absolute;
+	display: block;
+	content: "По формуле Ткаченко:";
+	left: 15%;
+	top: 0px;
+}
+
+.inner-res:nth-child(4)::after {
+	position: absolute;
+	display: block;
+	content: "По формуле Харриса:";
+	left: 15%;
+	top: 0px;
+}
+
+.inner-res:nth-child(5)::after {
+	position: absolute;
+	display: block;
+	left: 15%;
+	top: 0px;
+	content: "По формуле Колемана:";
+}
+
 .title-result {
 	position: absolute;
-	top: 5px;
+	top: 8px;
 	left: 50%;
 	transform: translateX(-50%);
-	font-size: 12px;
+	font-size: 14px;
 	font-family: 'Lato', sans-serif;
 	text-align: center;
 }
 
 .close {
 	position: absolute;
-	bottom: 5px;
+	bottom: 8px;
 	left: 50%;
 	transform: translateX(-50%);
 	display: block;
 	text-align: center;
-	font-size: 12px;
+	font-size: 14px;
 	font-family: 'Lato', sans-serif;
 }
 

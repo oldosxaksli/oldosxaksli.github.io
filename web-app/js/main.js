@@ -14,8 +14,6 @@ let result = document.querySelector(".result"); // Блок вывода рез�
 let innerResult = document.querySelectorAll(".inner-res"); // Содержит span для вывода результата
 let up = document.querySelector(".up"); // Кнопка вверх
 
-let cookie = 0;
-
 const listBgImages = [ // Массив с фоновыми изображениями
 	'img/bg/bg-run2.jpg',
 	'img/bg/bg_motosport.jpg',
@@ -89,54 +87,41 @@ let timerProgressBar = setInterval(progressBar, 500);
 forma.addEventListener('submit', (event) => {
 	event.preventDefault();
 
-	console.log(document.form.age);
-
 //Формула Маффина
-
-
 if (inputSelect.value == '1') {
 	let maffinMan = 0;
-	maffinMan = (10 * inputMassa.value) + 6.25 * (inputHeight.value) - (5 * inputAge.value) + 5;
-	resultList.push(maffinMan);
-	console.log(resultList);
+	maffinMan = Number((10 * inputMassa.value) + 6.25 * (inputHeight.value) - (5 * inputAge.value) + 5);
+	resultList.push(maffinMan.toFixed(0))
 }
-
-
 
 if (inputSelect.value == '0') {
 	let maffinWoman = 0;
-	maffinWoman = (10 * inputMassa.value) + (6.25 * inputHeight.value) - (5 * inputAge.value) - 161;
-	resultList.push(maffinWoman);
-	console.log(resultList);
+	maffinWoman = Number((10 * inputMassa.value) + (6.25 * inputHeight.value) - (5 * inputAge.value) - 161);
+	resultList.push(maffinWoman.toFixed(0))
 }
-
 
 //Формула Ткаченко
 let tkachenkoMan;
 
 if (inputSelect.value == '1') {
 	if (inputAge.value >= 10 && inputAge.value <= 17) {
-		tkachenkoMan = (16.6 * inputMassa.value) + 119 + 572;
-		resultList.push(tkachenkoMan);
-		console.log(resultList);
+		tkachenkoMan = Number((16.6 * inputMassa.value) + 119 + 572);
+		resultList.push(tkachenkoMan.toFixed(0));
 	}
 
 	if (inputAge.value >= 18 && inputAge.value <= 30) {
-		tkachenkoMan = (15.4 * inputMassa.value) - (27 * (inputHeight.value / 100)) + 717;
-		resultList.push(tkachenkoMan);
-		console.log(resultList);
+		tkachenkoMan = Number((15.4 * inputMassa.value) - (27 * (inputHeight.value / 100)) + 717);
+		resultList.push(tkachenkoMan.toFixed(0));
 	}
 
 	if (inputAge.value >= 31 && inputAge.value <= 60) {
-		tkachenkoMan = (11.3 * inputMassa.value) - (16 * (inputHeight.value / 100)) + 901;
-		resultList.push(tkachenkoMan);
-		console.log(resultList);
+		tkachenkoMan = Number((11.3 * inputMassa.value) - (16 * (inputHeight.value / 100)) + 901);
+		resultList.push(tkachenkoMan.toFixed(0));
 	}
 
 	if (inputAge.value > 60) {
-		tkachenkoMan = (8.8 * inputMassa.value)	- (1128 * (inputHeight.value / 100)) - 1071;
-		resultList.push(tkachenkoMan);
-		console.log(resultList);
+		tkachenkoMan = Number((8.8 * inputMassa.value)	- (1128 * (inputHeight.value / 100)) - 1071);
+		resultList.push(tkachenkoMan.toFixed(0));
 	}
 }
 
@@ -144,75 +129,63 @@ let tkachenkoWoman;
 
 if (inputSelect.value == '0') {
 	if (inputAge.value >= 10 && inputAge.value <= 17) {
-		tkachenkoWoman = (7.4 * inputMassa.value) + (482 * (inputHeight.value / 100)) + 271;
-		resultList.push(tkachenkoWoman);
-		console.log(resultList);
+		tkachenkoWoman = Number((7.4 * inputMassa.value) + (482 * (inputHeight.value / 100)) + 271);
+		resultList.push(tkachenkoWoman.toFixed(0));
 	}
 
 	if (inputAge.value >= 18 && inputAge.value <= 30) {
-		tkachenkoWoman = (13.3 * inputMassa.value) - (334 * (inputHeight.value / 100)) + 35;
-		resultList.push(tkachenkoWoman);
-		console.log(resultList);
+		tkachenkoWoman = Number((13.3 * inputMassa.value) - (334 * (inputHeight.value / 100)) + 35);
+		resultList.push(tkachenkoWoman.toFixed(0));
 	}
 
 	if (inputAge.value >= 31 && inputAge.value <= 60) {
-		tkachenkoWoman = (8.7 * inputMassa.value) - (25 * (inputHeight.value / 100)) + 865;
-		resultList.push(tkachenkoWoman);
-		console.log(resultList);
+		tkachenkoWoman = Number((8.7 * inputMassa.value) - (25 * (inputHeight.value / 100)) + 865);
+		resultList.push(tkachenkoWoman.toFixed(0));
 	}
 
 	if (inputAge.value > 60) {
-		tkachenkoWoman = (9.2 * inputMassa.value) - (637 * (inputHeight.value / 100)) - 302;
-		resultList.push(tkachenkoWoman);
-		console.log(resultList);
+		tkachenkoWoman = Number((9.2 * inputMassa.value) - (637 * (inputHeight.value / 100)) - 302);
+		resultList.push(tkachenkoWoman.toFixed(0));
 	}
 }
-
 
 //Формула Харриса
 let harrisMan;
 
 if (inputSelect.value == '1') {
-	harrisMan = 66 + (13.8 * inputMassa.value) + (5 * inputHeight.value) - (6.8 * inputAge.value);
-	resultList.push(harrisMan);
-	console.log(resultList);
+	harrisMan = Number(66 + (13.8 * inputMassa.value) + (5 * inputHeight.value) - (6.8 * inputAge.value));
+	resultList.push(harrisMan.toFixed(0))
 }
 
 let harrisWoman;
 
 if (inputSelect.value == '0') {
-	harrisWoman = 665 + (9.5 * inputMassa.value) + (1.9 * inputHeight.value) - (4.7 * inputAge.value);
-	resultList.push(harrisWoman);
-	console.log(resultList);
+	harrisWoman = Number(665 + (9.5 * inputMassa.value) + (1.9 * inputHeight.value) - (4.7 * inputAge.value));
+	resultList.push(harrisWoman.toFixed(0))
 }
-
 
 //Формула Колемана
 let kolemanMan;
 
 if (inputSelect.value == '1') {
 	if (inputAge.value >= 10 && inputAge.value <= 17) {
-		kolemanMan = (17.5 * inputMassa.value) + 651;
-		resultList.push(kolemanMan);
-		console.log(resultList);
+		kolemanMan = Number((17.5 * inputMassa.value) + 651);
+		resultList.push(kolemanMan.toFixed(0));
 	}
 
 	if (inputAge.value >= 18 && inputAge.value <= 29) {
-		kolemanMan = (15.3 * inputMassa.value) + 679;
-		resultList.push(kolemanMan);
-		console.log(resultList);
+		kolemanMan = Number((15.3 * inputMassa.value) + 679);
+		resultList.push(kolemanMan.toFixed(0));
 	}
 
 	if (inputAge.value >= 30 && inputAge.value <= 60) {
-		kolemanMan = (11.6 * inputMassa.value) + 879;
-		resultList.push(kolemanMan);
-		console.log(resultList);
+		kolemanMan = Number((11.6 * inputMassa.value) + 879);
+		resultList.push(kolemanMan.toFixed(0));
 	}
 
 	if (inputAge.value > 61) {
-		kolemanMan = (13.5 * inputMassa.value) + 487;
-		resultList.push(kolemanMan);
-		console.log(resultList);
+		kolemanMan = Number((13.5 * inputMassa.value) + 487);
+		resultList.push(kolemanMan.toFixed(0));
 	}
 }
 
@@ -220,33 +193,29 @@ let kolemanWoman;
 
 if (inputSelect.value == '0') {
 	if (inputAge.value >= 10 && inputAge.value <= 17) {
-		kolemanWoman = (12.2 * inputMassa.value) + 746;
-		resultList.push(kolemanWoman);
-		console.log(resultList);
+		kolemanWoman = Number((12.2 * inputMassa.value) + 746);
+		resultList.push(kolemanWoman.toFixed(0));
 	}
 
 	if (inputAge.value >= 18 && inputAge.value <= 29) {
-		kolemanWoman = (14.7 * inputMassa.value) + 496;
-		resultList.push(kolemanWoman);
-		console.log(resultList);
+		kolemanWoman = Number((14.7 * inputMassa.value) + 496);
+		resultList.push(kolemanWoman.toFixed(0));
 	}
 
 	if (inputAge.value >= 30 && inputAge.value <= 60) {
-		kolemanWoman = (8.7 * inputMassa.value) + 829;
-		resultList.push(kolemanWoman);
-		console.log(resultList);
+		kolemanWoman = Number((8.7 * inputMassa.value) + 829);
+		resultList.push(kolemanWoman.toFixed(0));
 	}
 
 	if (inputAge.value > 61) {
-		kolemanWoman = (10.5 * inputMassa.value) + 596;
-		resultList.push(kolemanWoman);
-		console.log(resultList);
+		kolemanWoman = Number((10.5 * inputMassa.value) + 596);
+		resultList.push(kolemanWoman.toFixed(0));
 	}
 }
 
 // Вывод результата из массива в текст клиенту
 for (let i = 0; i < resultList.length; i++) {
-	innerResult[i].innerHTML = resultList[i];
+	innerResult[i].innerHTML = resultList[i] + "  ккал/сутки";
 }
 
 //Появление блока с результатом 
@@ -261,6 +230,6 @@ result.onclick = (event) => {
 	result.style.opacity = "0";
 	result.style.zIndex = "-100";
 	for (let i = 0; i < resultList.length; i++) {
-		delete resultList[i];
+		resultList = new Array();
 	}
 }
