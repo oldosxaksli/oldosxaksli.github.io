@@ -79,38 +79,45 @@ body {
 
 .wrap-logout {
 	margin-right: 10px;
+	display: flex;
+	align-items: center;
 }
 
-.log-in {
-	position: relative;
-	overflow: hidden;
-	background-color: transparent;
-	border: 2px solid orange;
-	border-radius: 5px;
-	padding: 5px 9px;
-	-webkit-transition: all .2s ease;
-	transition: all .2s ease;
+.wrap-btn-off-on {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.log-in::before {
-	-webkit-transition: all .5s ease;
-	transition: all .5s ease;
-	position: absolute;
-	content: "";
-	display: block;
+.on,
+.off {
+	width: 60px;
+	height: 27px;
+	text-align: center;
+	line-height: 29px;
+	font-size: 14px;
+	font-family: 'Lato', sans-serif;
+	border: none;
+	transition: all .3s ease;
+}
+
+.on:hover,
+.off:hover {
+	cursor: pointer;
+}
+
+.on {
+	color: #fff;
+	background-color: #000;
+	border-top-left-radius: 45px;
+	border-bottom-left-radius: 45px;
+}
+
+.off {
+	color: #000;
 	background-color: #fff;
-	top: 0;
-	left: -40px;
-	width: 20px;
-	height: 40px;
-}
-
-.log-in:hover::before {
-	left: 100%;
-} 
-
-.log-in:hover {
-	border-color: #24d13e;
+	border-top-right-radius: 45px;
+	border-bottom-right-radius: 45px;
 }
 
 .link-log-in {
@@ -127,6 +134,7 @@ body {
 }
 
 .content-metabolism {
+	background-color: #fff;
 	padding: 30px 10px 60px 10px;
 }
 
@@ -330,4 +338,40 @@ body {
 	text-align: center;
 	font-size: 12px;
 	font-family: 'Lato', sans-serif;
+}
+
+.up {
+	display: none;
+	width: 60px;
+	height: 60px;
+	position: fixed;
+	z-index: 101;
+	bottom: 40px;
+	left: 40px;
+	color: #000;
+	text-align: center;
+	line-height: 60px;
+	font-size: 25px;
+	text-transform: uppercase;
+	border-radius: 30px;
+
+	animation: up linear infinite 2s;
+}
+
+.up:hover {
+	cursor: pointer;
+}
+
+@keyframes up {
+	0% {
+		background-color: purple;
+	}
+
+	50% {
+		background-color: pink;
+	}
+
+	100% {
+		background-color: yellow;
+	}
 }
