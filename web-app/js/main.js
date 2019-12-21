@@ -17,6 +17,15 @@ let up = document.querySelector(".up"); // Кнопка вверх
 let on = document.querySelector(".on");
 let off= document.querySelector(".off");
 
+const listBgImages = [ // Массив с фоновыми изображениями
+	'img/bg/bg-run2.jpg',
+	'img/bg/bg_motosport.jpg',
+	'img/bg/bg-velosport.jpg',
+	'img/bg/bgBlack.jpg',
+	'img/bg/chiornyi-fon-tiomnyi-fon-listva-zelenaia.jpg'
+];
+
+// Ночная тема
 on.addEventListener('click', (event) => {
 	bgContentMtblz.style.backgroundColor = "#000";
 	headerPage.style.backgroundColor = "#0d0f0e";
@@ -24,6 +33,7 @@ on.addEventListener('click', (event) => {
 	on.style.color = "#000";
 	off.style.color = "#fff";
 	off.style.backgroundColor = "#000";
+	bgMetabolism.style.backgroundImage = `url(${listBgImages[4]})`;
 	for (let i = 0; i < text.length; i++) {
 		text[i].style.color = "#bccfc1";
 	}
@@ -39,6 +49,7 @@ off.addEventListener('click', (event) => {
 	off.style.color = "#000";
 	on.style.color = "#fff";
 	on.style.backgroundColor = "#000";
+	bgMetabolism.style.backgroundImage = `url(${listBgImages[1]})`;
 	for (let i = 0; i < text.length; i++) {
 		text[i].style.color = "#000";
 	}
@@ -46,17 +57,6 @@ off.addEventListener('click', (event) => {
 		title[i].style.color = "#000";
 	}
 });
-
-const listBgImages = [ // Массив с фоновыми изображениями
-	'img/bg/bg-run2.jpg',
-	'img/bg/bg_motosport.jpg',
-	'img/bg/bg-velosport.jpg',
-	'img/bg/bgBlack.jpg'
-];
-
-bgMetabolism.style.backgroundImage = `url(${listBgImages[1]})`;
-
-let resultList = new Array(); // Массив с результатами вычислений по формулам
 
 let upInterval = setInterval(() => { // Появление и исчезание кнопки Up
 	if (scrollY != 0) {
@@ -72,7 +72,7 @@ up.addEventListener('click', () => { // Клик по кнопке Up, прок�
 	window.scrollTo(0, 0);
 });
 
-//Работа событий для текста
+//Работа событий для текста (колебания)
 for (let i = 0; i < title.length; i++) {
 	title[i].addEventListener('mouseover', () => {
 	title[i].classList.add("title"); 
@@ -115,12 +115,29 @@ function progressBar() {
 
 let timerProgressBar = setInterval(progressBar, 500);
 
+let resultList = new Array(); // Массив с результатами вычислений по формулам
+
+function validForm() {
+	if (inputForm[0].value == "" || inputForm[0].value == " ") {
+		return 0;
+	}
+
+	if (inputForm[1].value == "" || inputForm[1].value == " ") {
+		return 0;
+	}
+
+	if (inputForm[2].value == "" || inputForm[2].value == " ") {
+		return 0;
+	} else {return 1;}
+}
+
 //Обработка формы
 forma.addEventListener('submit', (event) => {
 
-for (let count = 0; count < inputForm.length; count++) {
-	if (inputForm[count].value != "" || inputForm[count].value != " ") {
-	
+let variableValidForm = validForm();
+
+if (variableValidForm != 0) {
+
 	//Формула Маффина
 	if (inputSelect.value == '1') {
 		let maffinMan = 0;
@@ -256,20 +273,16 @@ for (let count = 0; count < inputForm.length; count++) {
 	result.style.zIndex = "100";
 	result.style.display = "block";
 	result.style.opacity = "1";
-	
-	} else {
-		alert("Заполните форму!");
-	}
+	event.preventDefault(); // Отмена события по умолчанию(не отправляет форму на сервер)
+} else {
+	event.preventDefault();
+	alert("Заполните поля!");
 }
-	
-event.preventDefault();
 });
 
-//Закрыть блок
+//Закрыть блок с результатами и очистить массив 
 result.onclick = (event) => {
 	result.style.opacity = "0";
 	result.style.zIndex = "-100";
-	for (let i = 0; i < resultList.length; i++) {
-		resultList = new Array();
-	}
+	resultList = new Array();
 }
