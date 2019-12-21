@@ -14,6 +14,38 @@ let forma = document.querySelector(".form"); // Форма
 let result = document.querySelector(".result"); // Блок вывода результата
 let innerResult = document.querySelectorAll(".inner-res"); // Содержит span для вывода результата
 let up = document.querySelector(".up"); // Кнопка вверх
+let on = document.querySelector(".on");
+let off= document.querySelector(".off");
+
+on.addEventListener('click', (event) => {
+	bgContentMtblz.style.backgroundColor = "#000";
+	headerPage.style.backgroundColor = "#0d0f0e";
+	on.style.backgroundColor = "#fff";
+	on.style.color = "#000";
+	off.style.color = "#fff";
+	off.style.backgroundColor = "#000";
+	for (let i = 0; i < text.length; i++) {
+		text[i].style.color = "#bccfc1";
+	}
+	for (let i = 0; i < title.length; i++) {
+		title[i].style.color = "#bccfc1";
+	}
+});
+
+off.addEventListener('click', (event) => {
+	bgContentMtblz.style.backgroundColor = "#fff";
+	headerPage.style.backgroundColor = "rgba(61, 11, 22, 0.9)";
+	off.style.backgroundColor = "#fff";
+	off.style.color = "#000";
+	on.style.color = "#fff";
+	on.style.backgroundColor = "#000";
+	for (let i = 0; i < text.length; i++) {
+		text[i].style.color = "#000";
+	}
+	for (let i = 0; i < title.length; i++) {
+		title[i].style.color = "#000";
+	}
+});
 
 const listBgImages = [ // Массив с фоновыми изображениями
 	'img/bg/bg-run2.jpg',
