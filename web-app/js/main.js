@@ -128,7 +128,11 @@ function validForm() {
 
 	if (inputForm[2].value == "" || inputForm[2].value == " ") {
 		return 0;
-	} else {return 1;}
+	} 
+
+	else {
+		return 1;
+	}
 }
 
 //Обработка формы
@@ -275,9 +279,9 @@ if (variableValidForm != 0) {
 	result.style.opacity = "1";
 	event.preventDefault(); // Отмена события по умолчанию(не отправляет форму на сервер)
 } else {
-	event.preventDefault();
 	alert("Заполните поля!");
 }
+event.preventDefault();
 });
 
 //Закрыть блок с результатами и очистить массив 
