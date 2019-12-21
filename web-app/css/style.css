@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,700&display=swap');
 @charset 'utf-8';
+@import "reset.css";
+@import "animation.css";
+@font-face {
+	font-family: 'Lato', sans-serif;
+}
 
 body {
 	background-color: #000;
@@ -219,7 +225,8 @@ body {
   	border-radius: 10px;
 }
 
-.input-form {
+.input-form,
+.input-select {
 	margin: 8px 0;
 	width: 200px;
 	height: 40px;
