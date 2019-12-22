@@ -1,0 +1,24 @@
+@charset 'utf-8';
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+
+body {
+	background-color: pink;
+}
+
+.wrapper {
+	max-width: 1920px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.first-section {
+	position: relative;
+	width: 100%;
+	min-height: 950px;
+	background-image: url(../img/bg_header_replace.webp);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}

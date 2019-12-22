@@ -25,6 +25,13 @@ const listBgImages = [ // Массив с фоновыми изображени�
 	'img/bg/chiornyi-fon-tiomnyi-fon-listva-zelenaia.jpg'
 ];
 
+// let writenCookie = setInterval(() => { 
+// 	let date = new Date(Date.now() + 86400e3);
+// 	let cookies = document.cookie;
+// 	cookies = "Возраст=" + inputAge.value + " Рост=" + inputHeight.value + " Вес=" + inputMassa.value + "expires=" + date;
+// 	console.log(cookies);
+// },3000);
+
 // Ночная тема
 on.addEventListener('click', (event) => {
 	bgContentMtblz.style.backgroundColor = "#000";
