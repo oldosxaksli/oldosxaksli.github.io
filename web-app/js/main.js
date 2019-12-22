@@ -28,6 +28,7 @@ const listBgImages = [ // Массив с фоновыми изображени�
 // Ночная тема
 on.addEventListener('click', (event) => {
 	bgContentMtblz.style.backgroundColor = "#000";
+	bgContentMtblz.style.transition = "all .2s ease";
 	headerPage.style.backgroundColor = "#0d0f0e";
 	on.style.backgroundColor = "#fff";
 	on.style.color = "#000";
@@ -42,6 +43,7 @@ on.addEventListener('click', (event) => {
 	}
 });
 
+// Дневная тема
 off.addEventListener('click', (event) => {
 	bgContentMtblz.style.backgroundColor = "#fff";
 	headerPage.style.backgroundColor = "rgba(61, 11, 22, 0.9)";
@@ -96,20 +98,32 @@ for (let i = 0; i < text.length; i++) {
 
 //Функция для работы прогресс-бара
 function progressBar() {
-	if (inputAge.value == "" || inputAge.value == " ") {
+	if (inputAge.value != "" && inputHeight.value == "" && inputMassa.value == "") {
+		progress.value = "30";
+	}
+
+	else if (inputAge.value == "" && inputHeight.value == "" && inputMassa.value == "") {
 		progress.value = "0";
 	}
 
-	if (inputAge.value >= 10 && inputAge.value <= 120) {
-	progress.value = "30";
-	}
-
-	if (inputHeight.value >= 140 && inputHeight.value <= 210) {
+	if (inputHeight.value != "" && inputAge.value != "") {
 		progress.value = "60";
 	}
 
-	if (inputMassa.value >= 40 && inputMassa.value <= 200) {
+	else if (inputHeight.value != "" && inputAge.value == "" && inputMassa.value == "") {
+		progress.value = "30";
+	}
+
+	if (inputMassa.value != "" && inputHeight.value == "" && inputAge.value == "") {
+		progress.value = "30";
+	}
+
+	else if (inputMassa.value != "" && inputHeight.value != "" && inputAge.value != "") {
 		progress.value = "100";
+	}
+
+	else if (inputMassa.value != "" || inputHeight.value != "" && inputAge.value != "") {
+		progress.value = "60";
 	}
 }
 
@@ -117,7 +131,7 @@ let timerProgressBar = setInterval(progressBar, 500);
 
 let resultList = new Array(); // Массив с результатами вычислений по формулам
 
-function validForm() {
+function validForm() { // Проверка формы
 	if (inputForm[0].value == "" || inputForm[0].value == " ") {
 		return 0;
 	}
@@ -277,10 +291,12 @@ if (variableValidForm != 0) {
 	result.style.zIndex = "100";
 	result.style.display = "block";
 	result.style.opacity = "1";
-	event.preventDefault(); // Отмена события по умолчанию(не отправляет форму на сервер)
-} else {
+} 
+
+else {
 	alert("Заполните поля!");
 }
+
 event.preventDefault();
 });
 
