@@ -303,7 +303,7 @@ body {
 	width: 450px;
 	height: 350px;
 	border-radius: 5px;
-	background-color: #730a31;
+	background-color: #121012;
 	transition: all .5s ease;
 }
 
@@ -363,6 +363,8 @@ body {
 	top: 28px;
 	left: 50%;
 	transform: translateX(-50%);
+	color: #fff;
+	text-decoration: underline;
 	font-size: 14px;
 	font-family: 'Lato', sans-serif;
 	text-align: center;
@@ -374,7 +376,7 @@ body {
 	bottom: 28px;
 	left: 50%;
 	transform: translateX(-50%);
-	display: block;
+	color: #fff;
 	text-align: center;
 	font-size: 12px;
 	font-family: 'Lato', sans-serif;
@@ -414,4 +416,16 @@ body {
 	100% {
 		background-color: yellow;
 	}
+}
+
+.footer {
+	width: 100%;
+	height: 50px;
+	background-color: #162124;
+}
+
+.address {
+	color: #d1e5eb;
+	text-align: center;
+	line-height: 50px;
 }
