@@ -382,10 +382,6 @@ body {
 	text-align: center;
 }
 
-/*.reviews__wrap {
-	margin-top: 300px;
-}*/
-
 .review__text {
 	position: relative;
 	max-width: 700px;
@@ -406,4 +402,94 @@ body {
 	font-size: 80px;
 	left: 50%;
 	top: -39px;
+}
+
+.contact {
+	width: 100%;
+	min-height: 600px;
+	background-color: #fff;
+}
+
+.contact__wrap {
+	padding: 120px 0;
+	text-align: center;
+}
+
+.contact__title {
+	color: #413d4b;
+	font-family: Roboto;
+	font-size: 36px;
+	font-weight: 400;
+}
+
+.contact-form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 400px;
+	height: 500px;
+	margin: 60px auto 0 auto;
+}
+
+.input:not(textarea) {
+	width: 460px;
+	height: 45px;
+	margin-bottom: 45px;
+}
+
+.input[placeholder] {
+	font-family: Roboto;
+	font-size: 16px;
+	padding-left: 10px;
+}
+
+.textarea {
+	resize: none;
+	width: 460px;
+	height: 200px;
+}
+
+.textarea[placeholder] {
+	font-family: Roboto;
+	font-size: 16px;
+	padding: 10px 0 0 10px;
+}
+
+.wrap-form__btn {
+	margin: 40px auto 0 auto;
+}
+
+.form__btn {
+	border: none;
+	width: 120px;
+	height: 40px;
+	border: 1px solid #00e0d0;
+	background-color: #6bc2f1;
+	color: #fff;
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: uppercase;
+	transition: all .2s ease;
+}
+
+.form__btn:hover {
+	cursor: pointer;
+	opacity: .7;
+}
+
+.address {
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: 400;
+	text-align: center;
+	color: #fff;
+	line-height: 70px;
+}
+
+.footer {
+	width: 100%;
+	height: 70px;
+	background-color: #000;
 }
