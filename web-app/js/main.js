@@ -1,21 +1,21 @@
-let text = document.querySelectorAll(".content-metabolism__text"); // Параграфы с текстом
-let headerPage = document.querySelector(".header-page"); // Хедер
-let bgContentMtblz = document.querySelector(".content-metabolism"); // Контент метаболизм
-let title = document.querySelectorAll(".content-metabolism__title, .content-metabolism__h3-title"); // Заголовки
-let bgMetabolism = document.querySelector(".calc-metabolism"); // Блок с формой и фоновым изображением
-let progress = document.querySelector(".progress"); // Прогресс бар
-let inputForm = document.querySelectorAll(".input-form");
-let inputAge = document.querySelector(".input-age"); // Поле ввода возраста
-let inputHeight = document.querySelector(".input-height"); // Поле ввода роста
-let inputMassa = document.querySelector(".input-massa"); // Поле ввода массы тела
-let inputSelect = document.querySelector(".input-select"); // Выбор пола
-let btn = document.querySelector(".submit"); // Кнопка обработки формы
-let forma = document.querySelector(".form"); // Форма
-let result = document.querySelector(".result"); // Блок вывода результата
-let innerResult = document.querySelectorAll(".inner-res"); // Содержит span для вывода результата
-let up = document.querySelector(".up"); // Кнопка вверх
-let on = document.querySelector(".on");
-let off= document.querySelector(".off");
+const text = document.querySelectorAll(".content-metabolism__text"); // Параграфы с текстом
+const headerPage = document.querySelector(".header-page"); // Хедер
+const bgContentMtblz = document.querySelector(".content-metabolism"); // Контент метаболизм
+const title = document.querySelectorAll(".content-metabolism__title, .content-metabolism__h3-title"); // Заголовки
+const bgMetabolism = document.querySelector(".calc-metabolism"); // Блок с формой и фоновым изображением
+const progress = document.querySelector(".progress"); // Прогресс бар
+const inputForm = document.querySelectorAll(".input-form");
+const inputAge = document.querySelector(".input-age"); // Поле ввода возраста
+const inputHeight = document.querySelector(".input-height"); // Поле ввода роста
+const inputMassa = document.querySelector(".input-massa"); // Поле ввода массы тела
+const inputSelect = document.querySelector(".input-select"); // Выбор пола
+const btn = document.querySelector(".submit"); // Кнопка обработки формы
+const forma = document.querySelector(".form"); // Форма
+const result = document.querySelector(".result"); // Блок вывода результата
+const innerResult = document.querySelectorAll(".inner-res"); // Содержит span для вывода результата
+const up = document.querySelector(".up"); // Кнопка вверх
+const on = document.querySelector(".on");
+const off = document.querySelector(".off");
 
 const listBgImages = [ // Массив с фоновыми изображениями
 	'img/bg/bg-run2.jpg',
@@ -24,13 +24,6 @@ const listBgImages = [ // Массив с фоновыми изображени�
 	'img/bg/bgBlack.jpg',
 	'img/bg/chiornyi-fon-tiomnyi-fon-listva-zelenaia.jpg'
 ];
-
-// let writenCookie = setInterval(() => { 
-// 	let date = new Date(Date.now() + 86400e3);
-// 	let cookies = document.cookie;
-// 	cookies = "Возраст=" + inputAge.value + " Рост=" + inputHeight.value + " Вес=" + inputMassa.value + "expires=" + date;
-// 	console.log(cookies);
-// },3000);
 
 // Ночная тема
 on.addEventListener('click', (event) => {
@@ -67,15 +60,15 @@ off.addEventListener('click', (event) => {
 	}
 });
 
-let upInterval = setInterval(() => { // Появление и исчезание кнопки Up
+window.addEventListener('scroll', () => { // Показ и исчезание кнопки прокрутки вверх
 	if (scrollY != 0) {
-	up.style.display = "block";
-	} 
+		up.style.display = "block";
+	}
 
 	else if (scrollY == 0) {
 		up.style.display = "none";
 	}
-}, 3000);
+});
 
 up.addEventListener('click', () => { // Клик по кнопке Up, прокрутка вверх
 	window.scrollTo(0, 0);

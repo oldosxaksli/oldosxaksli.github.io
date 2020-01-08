@@ -1029,7 +1029,9 @@ input {
 	background-color: #000000;
 }
 
-.address {
+.aphtor {
+	display: inline-block;
+	width: 100%;
 	line-height: 50px;
 	text-align: center;
 	opacity: 0.5;

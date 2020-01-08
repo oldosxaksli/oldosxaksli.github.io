@@ -766,7 +766,9 @@ body {
 	background-color: #dedede;
 }
 
-.address {
+.aphtor {
+	display: inline-block;
+	width: 100%;
 	line-height: 50px;
 	text-align: center;
 }

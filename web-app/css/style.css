@@ -424,7 +424,9 @@ body {
 	background-color: #162124;
 }
 
-.address {
+.aphtor {
+	display: inline-block;
+	width: 100%;
 	color: #d1e5eb;
 	text-align: center;
 	line-height: 50px;
