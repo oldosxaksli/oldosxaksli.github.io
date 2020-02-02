@@ -1,26 +1,6 @@
 // About кнопка пролистать вниз
 const btnDown = document.getElementById("btn__scroll-down");
 
-// Контейнер Home
-let home = document.querySelector(".section-title");
-
-// Контейнер About
-let about = document.querySelector(".about");
-
-// Контейнер Sevicing
-let services = document.querySelector(".services");
-
-// Контейнер Portfolio
-let portfolio = document.querySelector(".works");
-
-// Контейнер Blog
-let blog = document.querySelector(".blog");
-
-// Контейнер ContactUs
-let contactUs = document.querySelector(".contact");
-
-
-
 // Кнопка скрытого меню
 const btnHideMenu = document.getElementById("btn-hide-menu");
 
@@ -38,19 +18,23 @@ const all = document.getElementById("all");
 const webDesign = document.getElementById("web-design");
 const uiUx = document.getElementById("ui-ux");
 const mockups = document.getElementById("mockups");
+const viewAll = document.getElementById("view-all");
+// Кнопки фильтры
 
 // Блоки works
-let jsOneWorks = document.querySelectorAll(".js-one-works");
-let jsTwoWorks = document.querySelectorAll(".js-two-works");
-let jsThreeWorks = document.querySelectorAll(".js-three-works");
+const jsOneWorks = document.querySelectorAll(".js-one-works");
+const jsTwoWorks = document.querySelectorAll(".js-two-works");
+const jsThreeWorks = document.querySelectorAll(".js-three-works");
+// Блоки works
 
 // Массив для фильтруемых блоков works
-let allButtons = new Array();
+const allButtons = new Array();
 allButtons.push(jsOneWorks);
 allButtons.push(jsTwoWorks);
 allButtons.push(jsThreeWorks);
+// Массив для фильтруемых блоков works
 
-// Кнопка для появления всех скрытых блоков
+// Кнопки для появления всех скрытых блоков
 all.addEventListener('click', (event) => {
 	for (let i = 0; i < allButtons.length; i++) {
 		for (let count = 0; count < allButtons[i].length; count++) {
@@ -65,6 +49,21 @@ all.addEventListener('click', (event) => {
 		}
 	}
 });
+viewAll.addEventListener('click', (event) => {
+	for (let i = 0; i < allButtons.length; i++) {
+		for (let count = 0; count < allButtons[i].length; count++) {
+			allButtons[i][count].style.display = "block"
+			webDesign.style.opacity = "1";
+			uiUx.style.opacity = "1";
+			mockups.style.opacity = "1";
+			setTimeout(()=> {
+				allButtons[i][count].style.opacity = "1";
+				allButtons[i][count].style.transform = "scale(1, 1)";
+			}, 500);
+		}
+	}
+});
+// Кнопки для появления всех скрытых блоков
 
 // Скрытие при нажатии кнопки фильтра Web Design
 webDesign.addEventListener('click', (event) => {
@@ -120,17 +119,38 @@ btnHideMenu.addEventListener('click', () => {
 //Выпадающее меню
 
 //Кнопка-стрелка пролистывания вниз
-// btnDown.addEventListener('click', () => {
-// 	about.scrollIntoView({behavior:'smooth'});
-// });
+btnDown.addEventListener('click', () => {
+	about.scrollIntoView({behavior:'smooth'});
+});
 //Кнопка пролистывания вниз
 
+// Контейнеры для скорлла по якорям
+let home = document.querySelector(".section-title");
+let about = document.querySelector(".about");
+let services = document.querySelector(".services");
+let portfolio = document.querySelector(".works");
+let blog = document.querySelector(".blog");
+let contactUs = document.querySelector(".contact");
+// Контейнеры для скорлла по якорям
+
+// Массив хранящиц контейнеры для скролла по якорям
+let allContainerScroll = new Array();
+allContainerScroll.push(home);
+allContainerScroll.push(about);
+allContainerScroll.push(services);
+allContainerScroll.push(portfolio);
+allContainerScroll.push(blog);
+allContainerScroll.push(contactUs);
+// Массив хранящиц контейнеры для скролла по якорям
+
 // Ссылки в шапке
-let btnHome = document.getElementById("home");
+const allLinksScroll = document.querySelectorAll(".js-link-scroll");
 // Ссылки в шапке
 
 // Скролл от ссылок в header к соответсвующим контейнерам
-btnHome.addEventListener('click', (event) => {
-	home.scrollIntoView();
-});
+for (let i = 0; i < allLinksScroll.length; i++) {
+	allLinksScroll[i].addEventListener('click', (event) => {
+		allContainerScroll[i].scrollIntoView({behavior:'smooth'});
+	});
+}
 // Скролл от ссылок в header к соответсвующим контейнерам
