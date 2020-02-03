@@ -1,4 +1,13 @@
 @media (min-width: 1000px) and (max-width: 1365px)
+	.outside-hidden-search
+		width: 280px
+		padding: 10px
+		border-radius: 7px
+
+	.hidden-search
+		width: 260px
+		padding: 5px
+
 	.hidden-menu
 		display: none
 
@@ -66,6 +75,15 @@
 		padding: 13px 23px
 
 @media (min-width: 750px) and (max-width: 999px)
+	.outside-hidden-search
+		width: 250px
+		padding: 8px
+		border-radius: 7px
+
+	.hidden-search
+		width: 230px
+		padding: 5px
+
 	.hidden-menu
 		display: none
 
@@ -177,6 +195,18 @@
 		padding: 10px 20px
 
 @media (min-width: 550px) and (max-width: 749px)
+	.outside-hidden-search
+		width: 200px
+		padding: 8px
+		border-radius: 7px
+
+	.hidden-search
+		width: 180px
+		padding: 5px
+		&[placeholder]
+			padding-left: 8px
+			font-size: 14px
+
 	.hidden-menu
 		display: none
 		
@@ -368,15 +398,29 @@
 			font-size: 15px
 
 @media (min-width: 320px) and (max-width: 549px)
+	.outside-hidden-search
+		width: 170px
+		padding: 8px
+		border-radius: 7px
+
+	.hidden-search
+		width: 150px
+		padding: 5px
+		font-size: 14px
+		&[placeholder]
+			padding-left: 8px
+			font-size: 12px
+
 	#btn-hide-menu
 		display: block
-		font-size: 10px
-		width: 50px
+		font-size: 9px
+		width: 30px
 		height: 30px
 		padding: 0
 		border-radius: 50%
 		border: none
 		background-color: #20B2AA
+		text-transform: none
 
 	.inner-container
 		max-width: 549px
@@ -386,7 +430,7 @@
 		.inner-container
 			width: 100%
 			display: flex
-			justify-content: space-around
+			justify-content: space-between
 			align-items: center
 
 	.header-page-logo

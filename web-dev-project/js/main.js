@@ -8,7 +8,7 @@ const btnHideMenu = document.getElementById("btn-hide-menu");
 const btnSearch = document.querySelector(".header-page-menu__search-link");
 
 // Скрытый инпут для поиска
-const searchInput = document.querySelector(".hidden-search");
+const searchInput = document.querySelector(".outside-hidden-search");
 
 // Скрытое выпадающее меню
 const hideMenu = document.querySelector(".hidden-menu");
@@ -28,37 +28,37 @@ const jsThreeWorks = document.querySelectorAll(".js-three-works");
 // Блоки works
 
 // Массив для фильтруемых блоков works
-const allButtons = new Array();
-allButtons.push(jsOneWorks);
-allButtons.push(jsTwoWorks);
-allButtons.push(jsThreeWorks);
+const allInnerBlock = new Array();
+allInnerBlock.push(jsOneWorks);
+allInnerBlock.push(jsTwoWorks);
+allInnerBlock.push(jsThreeWorks);
 // Массив для фильтруемых блоков works
 
 // Кнопки для появления всех скрытых блоков
 all.addEventListener('click', (event) => {
-	for (let i = 0; i < allButtons.length; i++) {
-		for (let count = 0; count < allButtons[i].length; count++) {
-			allButtons[i][count].style.display = "block"
+	for (let i = 0; i < allInnerBlock.length; i++) {
+		for (let count = 0; count < allInnerBlock[i].length; count++) {
+			allInnerBlock[i][count].style.display = "block"
 			webDesign.style.opacity = "1";
 			uiUx.style.opacity = "1";
 			mockups.style.opacity = "1";
 			setTimeout(()=> {
-				allButtons[i][count].style.opacity = "1";
-				allButtons[i][count].style.transform = "scale(1, 1)";
+				allInnerBlock[i][count].style.opacity = "1";
+				allInnerBlock[i][count].style.transform = "scale(1, 1)";
 			}, 500);
 		}
 	}
 });
 viewAll.addEventListener('click', (event) => {
-	for (let i = 0; i < allButtons.length; i++) {
-		for (let count = 0; count < allButtons[i].length; count++) {
-			allButtons[i][count].style.display = "block"
+	for (let i = 0; i < allInnerBlock.length; i++) {
+		for (let count = 0; count < allInnerBlock[i].length; count++) {
+			allInnerBlock[i][count].style.display = "block"
 			webDesign.style.opacity = "1";
 			uiUx.style.opacity = "1";
 			mockups.style.opacity = "1";
 			setTimeout(()=> {
-				allButtons[i][count].style.opacity = "1";
-				allButtons[i][count].style.transform = "scale(1, 1)";
+				allInnerBlock[i][count].style.opacity = "1";
+				allInnerBlock[i][count].style.transform = "scale(1, 1)";
 			}, 500);
 		}
 	}
@@ -134,7 +134,7 @@ let contactUs = document.querySelector(".contact");
 // Контейнеры для скорлла по якорям
 
 // Массив хранящиц контейнеры для скролла по якорям
-let allContainerScroll = new Array();
+const allContainerScroll = new Array();
 allContainerScroll.push(home);
 allContainerScroll.push(about);
 allContainerScroll.push(services);
@@ -144,12 +144,23 @@ allContainerScroll.push(contactUs);
 // Массив хранящиц контейнеры для скролла по якорям
 
 // Ссылки в шапке
-const allLinksScroll = document.querySelectorAll(".js-link-scroll");
+let allLinksScroll = document.querySelectorAll(".js-link-scroll");
 // Ссылки в шапке
+
+// Ссылки в скрытом меню
+let allLinksScrollHidden = document.querySelectorAll(".js-link-scroll-hidden");
+// Ссылки в скрытом меню
 
 // Скролл от ссылок в header к соответсвующим контейнерам
 for (let i = 0; i < allLinksScroll.length; i++) {
 	allLinksScroll[i].addEventListener('click', (event) => {
+		allContainerScroll[i].scrollIntoView({behavior:'smooth'});
+	});
+}
+
+// Скролл для скрытого выпадающего меню
+for (let i = 0; i < allLinksScrollHidden.length; i++) {
+	allLinksScrollHidden[i].addEventListener('click', (event) => {
 		allContainerScroll[i].scrollIntoView({behavior:'smooth'});
 	});
 }
