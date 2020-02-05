@@ -6,10 +6,5 @@ const hideMenu = document.querySelector(".hidden-menu");
 
 //Выпадающее меню
 btnHideMenu.addEventListener('click', (event) => {
-	if (hideMenu.style.display == "block") {
-		hideMenu.style.display = "none"
-	} else {
-		hideMenu.style.display = "block"
-		hideMenu.style.opacity = ".97";
-	}
+	hideMenu.classList.toggle("hidden-menu-animation");
 });
