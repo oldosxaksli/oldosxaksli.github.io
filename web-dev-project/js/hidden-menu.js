@@ -5,11 +5,11 @@ const btnHideMenu = document.getElementById("btn-hide-menu");
 const hideMenu = document.querySelector(".hidden-menu");
 
 //Выпадающее меню
-btnHideMenu.addEventListener('click', () => {
+btnHideMenu.addEventListener('click', (event) => {
 	if (hideMenu.style.display == "block") {
 		hideMenu.style.display = "none"
 	} else {
 		hideMenu.style.display = "block"
-		hideMenu.style.opacity = ".9";
+		hideMenu.style.opacity = ".97";
 	}
 });

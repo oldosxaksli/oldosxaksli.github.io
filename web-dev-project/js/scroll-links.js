@@ -9,11 +9,11 @@ const contactUs = document.querySelector(".contact");
 // Ссылки в шапке
 const allLinksScroll = document.querySelectorAll(".js-link-scroll");
 
-// Ссылки в скрытом меню
+// Ссылки в  шапке для скрытом меню
 const allLinksScrollHidden = document.querySelectorAll(".js-link-scroll-hidden");
 
 // Массив хранящиц контейнеры для скролла по якорям
-let allContainerScroll = new Array();
+const allContainerScroll = new Array();
 allContainerScroll.push(home);
 allContainerScroll.push(about);
 allContainerScroll.push(services);
@@ -22,15 +22,15 @@ allContainerScroll.push(blog);
 allContainerScroll.push(contactUs);
 
 // Скролл от ссылок в header к соответсвующим контейнерам
-for (let i = 0; i < allLinksScroll.length; i++) {
+allContainerScroll.forEach((item, i, arr) => {
 	allLinksScroll[i].addEventListener('click', (event) => {
 		allContainerScroll[i].scrollIntoView({behavior:'smooth'});
 	});
-}
+});
 
-// Скролл для скрытого выпадающего меню
-for (let i = 0; i < allLinksScrollHidden.length; i++) {
+// // Скролл от ссылок в header к соответсвующим контейнерам для скрытого меню
+allContainerScroll.forEach((item, i, arr) => {
 	allLinksScrollHidden[i].addEventListener('click', (event) => {
 		allContainerScroll[i].scrollIntoView({behavior:'smooth'});
 	});
-}
+});
