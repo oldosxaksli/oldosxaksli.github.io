@@ -16,6 +16,30 @@ allInnerBlock.push(jsOneWorks);
 allInnerBlock.push(jsTwoWorks);
 allInnerBlock.push(jsThreeWorks);
 
+
+
+
+
+// Массив для кнопок-фильтров
+const buttonFilter = new Array();
+buttonFilter.push(webDesign);
+buttonFilter.push(uiUx);
+buttonFilter.push(mockups);
+
+for (let i = 0; i < buttonFilter.length; i++) {
+	console.log(buttonFilter[i]);
+}
+
+// buttonFilter.forEach((item, i, arr) => {
+// 	buttonFilter[i].addEventListener('click', (event) => {
+		
+// 	});
+// });
+
+
+
+
+
 // Кнопки для появления всех скрытых блоков
 all.addEventListener('click', (event) => {
 	for (let i = 0; i < allInnerBlock.length; i++) {
@@ -27,7 +51,7 @@ all.addEventListener('click', (event) => {
 			setTimeout(()=> {
 				allInnerBlock[i][count].style.opacity = "1";
 				allInnerBlock[i][count].style.transform = "scale(1, 1)";
-			}, 500);
+			}, 200);
 		}
 	}
 });
@@ -41,7 +65,7 @@ viewAll.addEventListener('click', (event) => {
 			setTimeout(()=> {
 				allInnerBlock[i][count].style.opacity = "1";
 				allInnerBlock[i][count].style.transform = "scale(1, 1)";
-			}, 500);
+			}, 200);
 		}
 	}
 });
@@ -54,7 +78,7 @@ webDesign.addEventListener('click', (event) => {
 		webDesign.style.opacity = ".3";
 		setTimeout(() => {
 			jsOneWorks[i].style.display = "none";
-		}, 500);
+		}, 200);
 	}
 });
 
@@ -66,7 +90,7 @@ uiUx.addEventListener('click', (event) => {
 		uiUx.style.opacity = ".3";
 		setTimeout(() => {
 			jsTwoWorks[i].style.display = "none";
-		}, 500);
+		}, 200);
 	}
 });
 
@@ -78,6 +102,6 @@ mockups.addEventListener('click', (event) => {
 		mockups.style.opacity = ".3";
 		setTimeout(() => {
 			jsThreeWorks[i].style.display = "none";
-		}, 500);
+		}, 200);
 	}
 });

@@ -28,7 +28,7 @@ allContainerScroll.forEach((item, i, arr) => {
 	});
 });
 
-// // Скролл от ссылок в header к соответсвующим контейнерам для скрытого меню
+// Скролл от ссылок в header к соответсвующим контейнерам для скрытого меню
 allContainerScroll.forEach((item, i, arr) => {
 	allLinksScrollHidden[i].addEventListener('click', (event) => {
 		allContainerScroll[i].scrollIntoView({behavior:'smooth'});

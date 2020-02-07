@@ -8,3 +8,8 @@ const hideMenu = document.querySelector(".hidden-menu");
 btnHideMenu.addEventListener('click', (event) => {
 	hideMenu.classList.toggle("hidden-menu-animation");
 });
+
+// Прячем меню при изменении ширины экрана
+window.addEventListener('resize', (event) => {
+	hideMenu.classList.remove("hidden-menu-animation");
+});
