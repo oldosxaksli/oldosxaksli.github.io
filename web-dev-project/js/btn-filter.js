@@ -16,29 +16,23 @@ allInnerBlock.push(jsOneWorks);
 allInnerBlock.push(jsTwoWorks);
 allInnerBlock.push(jsThreeWorks);
 
-
-
-
-
 // Массив для кнопок-фильтров
 const buttonFilter = new Array();
 buttonFilter.push(webDesign);
 buttonFilter.push(uiUx);
 buttonFilter.push(mockups);
 
-for (let i = 0; i < buttonFilter.length; i++) {
-	console.log(buttonFilter[i]);
-}
-
+// При клике на кнопку-фильтр скрываем блок.
 // buttonFilter.forEach((item, i, arr) => {
 // 	buttonFilter[i].addEventListener('click', (event) => {
-		
+// 		allInnerBlock[i][i].style.opacity = "0";
+// 		allInnerBlock[i][i].style.transform = "scale(0, 0)";
+// 		buttonFilter[i].style.opacity = ".3";
+// 		setTimeout(() => {
+// 			allInnerBlock[i][i].style.display = "none";
+// 		}, 200);
 // 	});
 // });
-
-
-
-
 
 // Кнопки для появления всех скрытых блоков
 all.addEventListener('click', (event) => {
