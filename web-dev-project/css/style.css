@@ -1,5 +1,8 @@
 @import "reset.css";
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans/OpenSans-Regular.ttf");
+}
 button:focus {
   outline: none;
 }
@@ -109,7 +112,7 @@ button:focus {
   text-align: center;
   display: block;
   padding: 8px 5px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 14px;
   color: #fff;
   transition: all 0.2s ease;
@@ -122,7 +125,7 @@ button:focus {
 .header-page {
   position: relative;
   display: flex;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   color: #212121;
   padding: 50px 0px;
 }
@@ -147,7 +150,7 @@ button:focus {
 .header-page-menu__link {
   padding-left: 40px;
   color: #5b635f;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-weight: 600;
   transition: all 0.2s ease;
 }
@@ -169,12 +172,12 @@ button:focus {
 
 .section-title__name {
   font-size: 60px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   color: #fff;
 }
 
 .section-title__text {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 22px;
   padding: 26px 0 110px 0;
   color: #fff;
@@ -190,7 +193,7 @@ button:focus {
   background-color: rgba(0, 0, 0, 0);
   border: 3px solid #fff;
   padding: 15px 25px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   transition: all 0.2s ease;
 }
 .section-title-buttons button:first-child {
@@ -239,7 +242,7 @@ button:focus {
 
 .about__title {
   color: #212121;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 30px;
   font-weight: 700;
   line-height: 22px;
@@ -250,7 +253,7 @@ button:focus {
   width: 620px;
   padding: 35px 0 100px 0;
   color: #212121;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 15px;
   font-weight: 400;
   line-height: 22px;
@@ -269,7 +272,7 @@ button:focus {
 .about-icon__title {
   padding: 40px 0 25px 0;
   color: #212121;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 20px;
   font-weight: 400;
   line-height: 22px;
@@ -279,7 +282,7 @@ button:focus {
   width: 300px;
   margin: 0 auto;
   color: #212121;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 15px;
   font-weight: 400;
   line-height: 22px;
@@ -296,7 +299,7 @@ button:focus {
 .services__title {
   padding-bottom: 35px;
   color: #212121;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 30px;
   font-weight: 700;
   line-height: 22px;
@@ -307,7 +310,7 @@ button:focus {
   max-width: 620px;
   margin: 0 auto;
   color: #212121;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 15px;
   font-weight: 400;
   line-height: 22px;
@@ -341,7 +344,7 @@ button:focus {
 
 .services-wrap__block button {
   color: #000;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 20px;
   font-weight: 600;
   padding: 15px 20px 15px 15px;
@@ -356,7 +359,7 @@ button:focus {
 }
 
 .services-wrap-block__title {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 20px;
 }
 
@@ -364,7 +367,7 @@ button:focus {
   width: 70%;
   margin: 0 auto;
   padding: 25px 0px 45px 0px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 15px;
 }
 
@@ -377,7 +380,7 @@ button:focus {
 
 .works__title {
   color: #212121;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 30px;
   font-weight: 700;
   line-height: 22px;
@@ -388,7 +391,7 @@ button:focus {
   width: 620px;
   margin: 0 auto 112px auto;
   color: #212121;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 15px;
   font-weight: 400;
   line-height: 22px;
@@ -404,7 +407,7 @@ button:focus {
   padding: 20px 30px;
   border: 2px solid #00897b;
   color: #212121;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 20px;
   font-weight: 400;
   line-height: 22px;
@@ -449,7 +452,7 @@ button:focus {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 20px;
   font-weight: 400;
   display: none;
@@ -466,7 +469,7 @@ button:focus {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 20px;
   font-weight: 400;
   display: none;
@@ -483,7 +486,7 @@ button:focus {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 20px;
   font-weight: 400;
   display: none;
@@ -500,7 +503,7 @@ button:focus {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 20px;
   font-weight: 400;
   display: none;
@@ -517,7 +520,7 @@ button:focus {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 20px;
   font-weight: 400;
   display: none;
@@ -534,7 +537,7 @@ button:focus {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 20px;
   font-weight: 400;
   display: none;
@@ -549,7 +552,7 @@ button:focus {
   padding: 20px 50px;
   border: 1px solid #00897b;
   color: #ffffff;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 20px;
   font-weight: 700;
   line-height: 22px;
@@ -575,7 +578,7 @@ button:focus {
 .pricing__title {
   padding-bottom: 30px;
   color: #212121;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 30px;
   font-weight: 700;
   line-height: 22px;
@@ -586,7 +589,7 @@ button:focus {
   margin: 0 auto;
   width: 620px;
   color: #212121;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 15px;
   font-weight: 400;
   line-height: 22px;
@@ -624,7 +627,7 @@ button:focus {
 
 .pricing-wrap-item__head-month {
   display: block;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 25px;
   font-weight: 400;
   line-height: 22px;
@@ -653,7 +656,7 @@ button:focus {
   background: transparent;
   border: 2px solid #000000;
   color: #212121;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 20px;
   font-weight: 400;
   line-height: 22px;
@@ -677,7 +680,7 @@ button:focus {
 .team__title {
   padding-bottom: 35px;
   color: #212121;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 30px;
   font-weight: 700;
   line-height: 22px;
@@ -688,7 +691,7 @@ button:focus {
   margin: 0 auto;
   width: 620px;
   color: #212121;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 15px;
   font-weight: 400;
   line-height: 22px;
@@ -703,7 +706,7 @@ button:focus {
 .team-wrap__name {
   padding-top: 38px;
   color: #212121;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 20px;
   font-weight: 400;
   line-height: 22px;
@@ -712,7 +715,7 @@ button:focus {
 .team-wrap__profession {
   padding-top: 12px;
   color: #212121;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 15px;
   font-weight: 400;
   line-height: 22px;
@@ -784,7 +787,7 @@ button:focus {
 .blog__title {
   padding-bottom: 30px;
   color: #212121;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 30px;
   font-weight: 700;
   line-height: 22px;
@@ -795,7 +798,7 @@ button:focus {
   margin: 0 auto;
   padding-bottom: 127px;
   color: #212121;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 15px;
   font-weight: 400;
   line-height: 22px;
@@ -830,7 +833,7 @@ button:focus {
   display: inline-block;
   padding: 30px 0 0 40px;
   color: #212121;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 17px;
   font-weight: 400;
   line-height: 22px;
@@ -839,7 +842,7 @@ button:focus {
 .blog-wrap-list-content__title {
   padding-top: 60px;
   color: #212121;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 25px;
   font-weight: 400;
   line-height: 22px;
@@ -854,7 +857,7 @@ button:focus {
   padding-top: 32px;
   width: 448px;
   color: #212121;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 15px;
   font-weight: 400;
   line-height: 22px;
@@ -873,7 +876,7 @@ button:focus {
 .contact__title {
   padding-bottom: 35px;
   color: #ffffff;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 30px;
   font-weight: 700;
   line-height: 22px;
@@ -884,7 +887,7 @@ button:focus {
   margin: 0 auto;
   width: 620px;
   color: #ffffff;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 15px;
   font-weight: 400;
   line-height: 22px;
@@ -902,7 +905,7 @@ button:focus {
   display: block;
   padding-top: 15px;
   color: #ffffff;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
@@ -928,7 +931,7 @@ button:focus {
 .form input[placeholder] {
   padding-left: 15px;
   color: #000;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
@@ -947,7 +950,7 @@ button:focus {
 .form textarea[placeholder] {
   padding: 15px 0 0 15px;
   color: #000;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
@@ -959,7 +962,7 @@ button:focus {
   border-radius: 10px;
   background-color: #ffffff;
   color: #212121;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 20px;
   font-weight: 700;
   line-height: 22px;
@@ -978,7 +981,7 @@ footer {
 }
 footer span {
   color: #000;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 20px;
   font-weight: 700;
   line-height: 22px;
@@ -1774,7 +1777,7 @@ footer span {
     padding-left: 0;
     display: inline-block;
     color: #212121;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans";
     font-size: 14px;
   }
   .blog-wrap-list-content__title {
@@ -1872,7 +1875,7 @@ footer span {
   }
   footer span {
     font-size: 14px;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans";
   }
 }
 

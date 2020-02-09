@@ -23,16 +23,18 @@ buttonFilter.push(uiUx);
 buttonFilter.push(mockups);
 
 // При клике на кнопку-фильтр скрываем блок.
-// buttonFilter.forEach((item, i, arr) => {
-// 	buttonFilter[i].addEventListener('click', (event) => {
-// 		allInnerBlock[i][i].style.opacity = "0";
-// 		allInnerBlock[i][i].style.transform = "scale(0, 0)";
-// 		buttonFilter[i].style.opacity = ".3";
-// 		setTimeout(() => {
-// 			allInnerBlock[i][i].style.display = "none";
-// 		}, 200);
-// 	});
-// });
+buttonFilter.forEach((item, i, arr) => {
+	buttonFilter[i].addEventListener('click', (event) => {
+		for (let count = 0; count < allInnerBlock[i].length; count++) {
+			allInnerBlock[i][count].style.opacity = "0";
+			allInnerBlock[i][count].style.transform = "scale(0, 0)";
+			buttonFilter[i].style.opacity = ".3";
+			setTimeout(() => {
+				allInnerBlock[i][count].style.display = "none";
+			}, 200);
+		}
+	});
+});
 
 // Кнопки для появления всех скрытых блоков
 all.addEventListener('click', (event) => {
@@ -61,41 +63,5 @@ viewAll.addEventListener('click', (event) => {
 				allInnerBlock[i][count].style.transform = "scale(1, 1)";
 			}, 200);
 		}
-	}
-});
-
-// Скрытие при нажатии кнопки фильтра Web Design
-webDesign.addEventListener('click', (event) => {
-	for (let i = 0; i < jsOneWorks.length; i++) {
-		jsOneWorks[i].style.opacity = "0";
-		jsOneWorks[i].style.transform = "scale(0, 0)";
-		webDesign.style.opacity = ".3";
-		setTimeout(() => {
-			jsOneWorks[i].style.display = "none";
-		}, 200);
-	}
-});
-
-// Скрытие при нажатии кнопки фильтра UI UX
-uiUx.addEventListener('click', (event) => {
-	for(let i = 0; i < jsTwoWorks.length; i++) {
-		jsTwoWorks[i].style.opacity = "0";
-		jsTwoWorks[i].style.transform = "scale(0, 0)";
-		uiUx.style.opacity = ".3";
-		setTimeout(() => {
-			jsTwoWorks[i].style.display = "none";
-		}, 200);
-	}
-});
-
-// Скрытие при нажатии кнопки фильтра Mockups
-mockups.addEventListener('click', (event) => {
-	for (let i = 0; i < jsThreeWorks.length; i++) {
-		jsThreeWorks[i].style.opacity = "0";
-		jsThreeWorks[i].style.transform = "scale(0, 0)";
-		mockups.style.opacity = ".3";
-		setTimeout(() => {
-			jsThreeWorks[i].style.display = "none";
-		}, 200);
 	}
 });
