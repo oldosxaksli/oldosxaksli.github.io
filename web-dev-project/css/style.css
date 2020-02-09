@@ -14,12 +14,14 @@ button:focus {
 }
 
 .outside-hidden-search {
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   position: absolute;
   top: 0;
   left: 50%;
   width: 300px;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   opacity: 0;
   z-index: -1;
   background-color: #00897b;
@@ -60,14 +62,17 @@ button:focus {
   left: 0;
   top: 100%;
   background-color: #20B2AA;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  transform: scale(0, 0);
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
 }
 
 .hidden-menu-animation {
   z-index: 1;
   opacity: 1;
-  transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
 }
 
 .hidden-menu:before {
@@ -79,14 +84,25 @@ button:focus {
   width: 20px;
   height: 20px;
   background-color: pink;
-  animation: pink 3s infinite linear;
+  -webkit-animation: pink 3s infinite linear;
+          animation: pink 3s infinite linear;
+}
+
+@-webkit-keyframes pink {
+  50% {
+    top: 90%;
+    background-color: yellow;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 @keyframes pink {
   50% {
     top: 90%;
     background-color: yellow;
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 .hidden-menu:after {
@@ -98,14 +114,25 @@ button:focus {
   width: 20px;
   height: 20px;
   background-color: yellow;
-  animation: yellow 3s infinite linear;
+  -webkit-animation: yellow 3s infinite linear;
+          animation: yellow 3s infinite linear;
+}
+
+@-webkit-keyframes yellow {
+  50% {
+    bottom: 90%;
+    background-color: pink;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 @keyframes yellow {
   50% {
     bottom: 90%;
     background-color: pink;
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 .hidden-menu__link {
@@ -115,6 +142,7 @@ button:focus {
   font-family: "Open Sans";
   font-size: 14px;
   color: #fff;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .hidden-menu__link:hover {
@@ -124,12 +152,14 @@ button:focus {
 
 .header-page {
   position: relative;
+  display: -webkit-box;
   display: flex;
   font-family: "Open Sans";
   color: #212121;
   padding: 50px 0px;
 }
 .header-page .inner-container {
+  display: -webkit-box;
   display: flex;
   margin: 0 auto;
   padding: 0 15px;
@@ -142,9 +172,12 @@ button:focus {
 
 .header-page-menu {
   position: relative;
+  display: -webkit-box;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
 }
 
 .header-page-menu__link {
@@ -152,6 +185,7 @@ button:focus {
   color: #5b635f;
   font-family: "Open Sans";
   font-weight: 600;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .header-page-menu__link:hover {
@@ -184,8 +218,10 @@ button:focus {
 }
 
 .section-title-buttons {
+  display: -webkit-box;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 .section-title-buttons button {
   font-size: 20px;
@@ -194,6 +230,7 @@ button:focus {
   border: 3px solid #fff;
   padding: 15px 25px;
   font-family: "Open Sans";
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .section-title-buttons button:first-child {
@@ -219,11 +256,21 @@ button:focus {
   height: 50px;
   color: #fff;
   font-size: 31px;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  animation: changes-btn 1.2s linear infinite;
+  -webkit-animation: changes-btn 1.2s linear infinite;
+          animation: changes-btn 1.2s linear infinite;
 }
 .scroll-down button:hover {
   cursor: pointer;
+}
+
+@-webkit-keyframes changes-btn {
+  50% {
+    width: 56px;
+    height: 56px;
+    font-size: 39px;
+  }
 }
 
 @keyframes changes-btn {
@@ -260,6 +307,7 @@ button:focus {
 }
 
 .about-icons {
+  display: -webkit-box;
   display: flex;
   justify-content: space-around;
   padding: 50px 50px;
@@ -317,9 +365,11 @@ button:focus {
 }
 
 .services-wrap {
+  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 .services-wrap__block {
@@ -327,6 +377,7 @@ button:focus {
   margin: 30px;
   padding: 60px 0px 50px 0px;
   background-color: #fff;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .services-wrap__block:hover {
@@ -339,7 +390,8 @@ button:focus {
   cursor: pointer;
 }
 .services-wrap__block img:hover {
-  filter: invert(100%);
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
 
 .services-wrap__block button {
@@ -350,11 +402,13 @@ button:focus {
   padding: 15px 20px 15px 15px;
   border: 2px solid #212121;
   background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
 .services-wrap__block img {
   padding-bottom: 40px;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -398,8 +452,10 @@ button:focus {
 }
 
 .works-navigation {
+  display: -webkit-box;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 .works-navigation__link {
@@ -412,6 +468,7 @@ button:focus {
   font-weight: 400;
   line-height: 22px;
   text-transform: uppercase;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .works-navigation__link:hover {
@@ -421,6 +478,7 @@ button:focus {
 }
 
 .works-wrap {
+  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -430,6 +488,7 @@ button:focus {
 .works-wrap__content {
   width: 370px;
   position: relative;
+  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   margin: 10px 10px 15px 10px;
 }
@@ -450,7 +509,8 @@ button:focus {
   content: "HandWatch";
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: #fff;
   font-family: "Open Sans";
   font-size: 20px;
@@ -467,7 +527,8 @@ button:focus {
   content: "One Day Pass";
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: #fff;
   font-family: "Open Sans";
   font-size: 20px;
@@ -484,7 +545,8 @@ button:focus {
   content: "Unclear";
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: #fff;
   font-family: "Open Sans";
   font-size: 20px;
@@ -501,7 +563,8 @@ button:focus {
   content: "T-shirt";
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: #fff;
   font-family: "Open Sans";
   font-size: 20px;
@@ -518,7 +581,8 @@ button:focus {
   content: "Bottle";
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: #fff;
   font-family: "Open Sans";
   font-size: 20px;
@@ -535,7 +599,8 @@ button:focus {
   content: "Bag";
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: #fff;
   font-family: "Open Sans";
   font-size: 20px;
@@ -558,6 +623,7 @@ button:focus {
   line-height: 22px;
   text-transform: uppercase;
   background-color: #00897b;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .inner-container > button:hover {
@@ -596,6 +662,7 @@ button:focus {
 }
 
 .pricing-wrap {
+  display: -webkit-box;
   display: flex;
   justify-content: space-around;
 }
@@ -604,6 +671,7 @@ button:focus {
   background-color: #fff;
   padding: 0 0 50px 0;
   width: 300px;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .pricing-wrap-item:hover {
@@ -644,7 +712,8 @@ button:focus {
   content: "";
   bottom: -3px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 50%;
   height: 1px;
   background-color: silver;
@@ -660,6 +729,7 @@ button:focus {
   font-size: 20px;
   font-weight: 400;
   line-height: 22px;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .pricing-wrap-item button:hover {
@@ -698,6 +768,7 @@ button:focus {
 }
 
 .team-wrap {
+  display: -webkit-box;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -723,19 +794,25 @@ button:focus {
 
 .team-wrap-social-icons {
   padding-top: 35px;
+  display: -webkit-box;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 .team-wrap-social-icon {
+  display: -webkit-box;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   margin: 0 7px;
   width: 50px;
   height: 50px;
   border-radius: 5px;
   background-color: #f0f1f1;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .team-wrap-social-icon:hover {
@@ -754,13 +831,16 @@ button:focus {
   background-color: #F4699D;
 }
 .team-wrap-social-icon:hover img {
-  filter: brightness(0%) invert(1);
+  -webkit-filter: brightness(0%) invert(1);
+          filter: brightness(0%) invert(1);
 }
 
 .team-btn-slider {
   padding-top: 125px;
+  display: -webkit-box;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 .team-btn-slider__elem {
@@ -769,6 +849,7 @@ button:focus {
   height: 15px;
   border-radius: 7px;
   background-color: #00897b;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .team-btn-slider__elem:hover {
@@ -805,16 +886,21 @@ button:focus {
 }
 
 .blog-wrap {
+  display: -webkit-box;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   flex-wrap: wrap;
   padding-bottom: 125px;
 }
 
 .blog-wrap-list {
+  display: -webkit-box;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 .blog-wrap-list__img {
@@ -846,6 +932,7 @@ button:focus {
   font-size: 25px;
   font-weight: 400;
   line-height: 22px;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .blog-wrap-list-content__title:hover {
@@ -896,6 +983,7 @@ button:focus {
 .contact-wrap {
   width: 60%;
   margin: 0 auto;
+  display: -webkit-box;
   display: flex;
   justify-content: space-around;
   padding-bottom: 85px;
@@ -909,6 +997,7 @@ button:focus {
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -917,7 +1006,8 @@ button:focus {
 }
 .contact-wrap-list img:hover {
   cursor: pointer;
-  filter: invert(1);
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
 
 .form input {
@@ -966,6 +1056,7 @@ button:focus {
   font-size: 20px;
   font-weight: 700;
   line-height: 22px;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .form button:hover {
@@ -1048,7 +1139,8 @@ footer span {
   }
 
   .blog-wrap-list {
-    align-items: flex-start;
+    -webkit-box-align: start;
+            align-items: flex-start;
   }
 
   .blog-wrap-list-content {
@@ -1180,7 +1272,8 @@ footer span {
   }
 
   .blog-wrap-list {
-    align-items: flex-start;
+    -webkit-box-align: start;
+            align-items: flex-start;
   }
 
   .blog-wrap-list-content__title {
@@ -1356,8 +1449,10 @@ footer span {
   }
 
   .works-navigation__link {
+    display: -webkit-box;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+            align-items: center;
     padding: 8px 18px;
     font-size: 18px;
   }
@@ -1375,8 +1470,11 @@ footer span {
 
   .pricing-wrap {
     flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+            align-items: center;
   }
 
   .pricing-wrap-item {
@@ -1400,8 +1498,11 @@ footer span {
   }
 
   .team-wrap {
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+            align-items: center;
   }
 
   .team-wrap__name {
@@ -1442,7 +1543,9 @@ footer span {
   }
 
   .blog-wrap-list {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
     padding-bottom: 40px;
   }
   .blog-wrap-list-content {
@@ -1454,7 +1557,9 @@ footer span {
   }
 
   .blog-wrap-list:nth-child(2) {
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+            flex-direction: column-reverse;
   }
 
   .blog-wrap-list__img {
@@ -1545,9 +1650,12 @@ footer span {
   }
   .header-page .inner-container {
     width: 100%;
+    display: -webkit-box;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
   }
 
   .header-page-logo {
@@ -1594,7 +1702,9 @@ footer span {
   }
 
   .about-icons {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
     padding: 0;
   }
   .about-icons .about-icon {
@@ -1657,8 +1767,10 @@ footer span {
   }
 
   .works-navigation__link {
+    display: -webkit-box;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+            align-items: center;
     margin: 0 10px;
     padding: 2px 5px;
     font-size: 12px;
@@ -1708,8 +1820,11 @@ footer span {
   }
 
   .pricing-wrap {
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+            align-items: center;
   }
 
   .pricing-wrap-item {
@@ -1785,7 +1900,9 @@ footer span {
   }
 
   .blog-wrap-list {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
   }
 
   .blog-wrap-list:not(:last-child) {
@@ -1793,7 +1910,9 @@ footer span {
   }
 
   .blog-wrap-list:nth-child(2) {
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+            flex-direction: column-reverse;
   }
 
   .blog-wrap-list__img {
@@ -1878,5 +1997,3 @@ footer span {
     font-family: "Open Sans";
   }
 }
-
-/*# sourceMappingURL=style.css.map */
