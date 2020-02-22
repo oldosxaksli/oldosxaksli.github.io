@@ -487,8 +487,432 @@ $transition: all .3s ease
 
 //work
 .work
+	position: relative
 	background-color: #fff
 	padding: 150px 0
+	&::before
+		position: absolute
+		display: block
+		content: "05"
+		opacity: 0.3
+		top: -100px
+		left: 50%
+		transform: translateX(-50%)
+		color: #e0e0e0
+		font-family: Poppins
+		font-size: 274px
 	.inner-conatiner
 		text-align: center
+
+.work__title
+	color: #313131
+	font-family: Libre
+	font-size: 50px
+	font-weight: 700
+	padding-bottom: 30px
+
+.work__text
+	max-width: 550px
+	margin: 0 auto
+	color: #616161
+	font-family: Poppins
+	font-size: 18px
+	font-weight: 400
+	padding-bottom: 130px
+
+.work-wrap-flex
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+
+.work-wrap-flex__item
+	position: relative
+	min-width: 556px
+	min-height: 300px
+	img
+		width: 100%
+		height: 100%
+
+.work-wrap-flex__hidden
+	position: absolute
+	background-color: #fff
+	padding: 40px 10px 40px 100px
+	opacity: .9
+	width: 400px
+	height: 250px
+	font-family: Poppins
+	text-align: left
+	left: -50%
+	top: 0
+	.title
+		color: #272727
+		font-size: 25px
+		font-weight: 400
+		padding-bottom: 25px
+	.text
+		max-width: 261px
+		margin: 0 auto
+		color: #616161
+		font-size: 15px
+		font-weight: 400
+
+.work-wrap-flex__item:nth-child(1) .work-wrap-flex__hidden
+		border-bottom: #fc5f45 3px solid
+		&:before
+			position: absolute
+			display: block
+			content: "01"
+			left: 10px
+			top: 10px
+			color: #e0e0e0
+			font-family: Libre
+			font-size: 50px
+			font-weight: 700
+			text-transform: uppercase
+
+.work-wrap-flex__item:nth-child(2) .work-wrap-flex__hidden
+		border-bottom: #38c695 3px solid
+		&:before
+			position: absolute
+			display: block
+			content: "02"
+			left: 10px
+			top: 10px
+			color: #e0e0e0
+			font-family: Libre
+			font-size: 50px
+			font-weight: 700
+			text-transform: uppercase
+
+.work-wrap-flex__item:nth-child(3) .work-wrap-flex__hidden
+		border-bottom: #b27cf5 3px solid
+		&:before
+			position: absolute
+			display: block
+			content: "03"
+			left: 10px
+			top: 10px
+			color: #e0e0e0
+			font-family: Libre
+			font-size: 50px
+			font-weight: 700
+			text-transform: uppercase
+
+.work-wrap-flex__item:nth-child(4) .work-wrap-flex__hidden
+		border-bottom: #feb960 3px solid
+		&:before
+			position: absolute
+			display: block
+			content: "04"
+			left: 10px
+			top: 10px
+			color: #e0e0e0
+			font-family: Libre
+			font-size: 50px
+			font-weight: 700
+			text-transform: uppercase
 //work
+
+//pricing
+.pricing
+	position: relative
+	background-color:  #f7f7f7
+	padding: 145px 0
+	&::before
+		position: absolute
+		display: block
+		content: "06"
+		opacity: 0.3
+		top: -100px
+		left: 50%
+		transform: translateX(-50%)
+		color: #e0e0e0
+		font-family: Poppins
+		font-size: 274px
+	.inner-container
+		text-align: center
+
+.pricing__title
+	color: #313131
+	font-family: Libre
+	font-size: 50px
+	font-weight: 700
+	padding-bottom: 30px
+
+.pricing__text
+	max-width: 550px
+	margin: 0 auto
+	color: #616161
+	font-family: Poppins
+	font-size: 18px
+	font-weight: 400
+	padding-bottom: 75px
+
+.pricing-wrap-flex
+	display: flex
+	align-items: center
+	justify-content: center
+	.pricing-wrap-flex-item
+		margin: 0 15px
+		background-color: #fff
+		max-width: 660px
+		max-height: 670px
+		padding: 45px 50px
+		button
+			border-radius: 25px
+			padding: 15px 40px
+			font-size: 16px
+			font-family: Poppins
+			background-color: transparent
+			transition: $transition
+		&:nth-child(1)
+			border-top: 3px solid #38c695
+			button
+				border: 2px solid #38c695
+				color: #38c695
+				&:hover
+					cursor: pointer
+					background-color: #38c695
+					color: #fff
+		&:nth-child(2)
+			border-top: 3px solid #fc5f45
+			button
+				border: 2px solid #fc5f45
+				color: #fc5f45
+				&:hover
+					cursor: pointer
+					background-color: #fc5f45
+					color: #fff
+		&:nth-child(3)
+			border-top: 3px solid #b27cf5
+			button
+				border: 2px solid #b27cf5
+				color: #b27cf5
+				&:hover
+					cursor: pointer
+					background-color: #b27cf5
+					color: #fff
+
+.pricing-wrap-flex-item__title
+	display: block
+	color: #313131
+	font-family: Poppins
+	font-size: 20px
+	font-weight: 500
+	padding-bottom: 30px
+
+.pricing-wrap-flex-item-circle
+	position: relative
+	width: 105px
+	height: 105px
+	border-radius: 50%
+	margin: 0 auto 45px auto
+	line-height: 105px
+	font-family: Poppins
+	font-size: 14px
+	color: #fff
+	letter-spacing: 1px
+
+.pricing-wrap-flex-item:nth-child(1) .pricing-wrap-flex-item-circle
+		background-color: #38c695
+		&::before
+			position: absolute
+			display: block
+			content: ""
+			width: 117px
+			height: 117px
+			background-color: transparent
+			border: 3px solid #38c695
+			border-radius: 50%
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+
+.pricing-wrap-flex-item:nth-child(2) .pricing-wrap-flex-item-circle
+		background-color: #fc5f45
+		&::before
+			position: absolute
+			display: block
+			content: ""
+			width: 117px
+			height: 117px
+			background-color: transparent
+			border: 3px solid #fc5f45
+			border-radius: 50%
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+
+.pricing-wrap-flex-item:nth-child(3) .pricing-wrap-flex-item-circle
+		background-color: #b27cf5
+		&::before
+			position: absolute
+			display: block
+			content: ""
+			width: 117px
+			height: 117px
+			background-color: transparent
+			border: 3px solid #b27cf5
+			border-radius: 50%
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+.pricing-wrap-flex-item__list
+	padding-bottom: 40px	
+	ul 
+		li
+			padding: 10px 0
+//pricing
+
+//testimonials
+.testimonials
+	position: relative
+	background-color: rgba(38, 39, 50, 0.85)
+	padding: 145px 0
+	&::before
+		position: absolute
+		display: block
+		content: "07"
+		opacity: 0.3
+		top: -100px
+		left: 50%
+		transform: translateX(-50%)
+		color: #e0e0e0
+		font-family: Poppins
+		font-size: 274px
+	.inner-container
+		text-align: center
+
+.testimonials__title
+	color: #ffffff
+	font-family: Libre
+	font-size: 50px
+	font-weight: 700
+	padding-bottom: 40px
+
+.testimonials__text
+	max-width: 550px
+	margin: 0 auto
+	color: #ffffff
+	font-family: Poppins
+	font-size: 18px
+	font-weight: 400
+	padding-bottom: 80px
+
+.testimonials-wrap-flex
+	display: flex
+	align-items: center
+	justify-content: center
+
+.testimonials-wrap-flex__img
+	max-width: 350px
+	max-height: 350px
+	img
+		width: 100%
+		height: 100%
+
+.testimonials-wrap-flex-content
+	position: relative
+	text-align: left
+	background-color: #fff
+	max-width: 850px
+	max-height: 350px
+	padding: 45px 80px
+	border-bottom: 3px solid #fc5f45
+	&::before
+		position: absolute
+		display: block
+		content: "“"
+		top: -30px
+		left: -10px
+		opacity: 0.3
+		color: #e0e0e0
+		font-family: Libre
+		font-size: 338px
+		font-weight: 700
+	span
+		display: block
+
+.testimonials-wrap-flex-content__text
+	color: #616161
+	font-family: Poppins
+	font-size: 15px
+	font-weight: 400
+
+.testimonials-wrap-flex-content__text2
+	color: #272727
+	font-family: Script
+	font-size: 40px
+	font-weight: 400
+	padding: 15px 0 15px 0
+
+.testimonials-wrap-flex-content__text3
+	color: #272727
+	font-family: Poppins
+	font-size: 18px
+	font-weight: 500
+	padding: 5px 0 5px 0
+
+.testimonials-wrap-flex-content__text4
+	color: #fc5f45
+	font-family: Poppins
+	font-size: 13px
+	font-weight: 400
+	padding: 5px 0 5px 0
+
+.testimonials-wrap-flex-content-btn-slide
+	position: absolute
+	bottom: -30px
+	right: 0
+	display: flex
+	align-items: center
+	justify-content: center
+	.item-btn-slide
+		margin: 0 3px
+		width: 18px
+		height: 18px
+		background-color: transparent
+		border: 3px solid #fc5f45
+		border-radius: 50%
+		transition: $transition
+		&:hover
+			cursor: pointer
+			background-color: #fc5f45
+//testimonials
+
+//select
+.select
+	position: relative
+	background-color: #fff
+	padding: 145px 0
+	&::before
+		position: absolute
+		display: block
+		content: "08"
+		opacity: 0.3
+		top: -100px
+		left: 50%
+		transform: translateX(-50%)
+		color: #e0e0e0
+		font-family: Poppins
+		font-size: 274px
+	.inner-container
+		text-align: center
+
+.select__title
+	color: #313131
+	font-family: Libre
+	font-size: 50px
+	font-weight: 700
+	padding-bottom: 30px
+
+.select__text
+	margin: 0 auto
+	max-width: 550px
+	color: #616161
+	font-family: Poppins
+	font-size: 18px
+	font-weight: 400
+	padding-bottom: 80px
+//select
