@@ -1009,4 +1009,221 @@ $transition: all .3s ease
 	font-size: 18px
 	font-weight: 400
 	padding-bottom: 75px
+
+.blog-flex-wrap
+	font-family: Poppins
+	display: flex
+	justify-content: center
+
+.blog-flex-wrap-figure
+	background-color: #fff
+	margin: 0
+	img
+		max-width: 555px
+		max-height: 443px
+
+.blog-flex-wrap-figure-figcaption
+	padding: 45px 50px
+	border-bottom: 3px solid  #fc5f45
+	text-align: left
+	span
+		display: block
+
+.blog-flex-wrap-figure-figcaption__title
+	max-width: 450px
+	color: #272727
+	font-size: 20px
+	font-weight: 500
+	padding-bottom: 35px
+
+.blog-flex-wrap-figure-figcaption__subtitle
+	max-width: 424px
+	color: #616161
+	font-size: 15px
+	font-weight: 400
+
+.blog-flex-wrap-content
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: space-between
+	margin-left: 30px
+	.blog-flex-wrap-content-item
+		max-width: 600px
+		background-color: #fff
+		padding: 30px 35px
+		font-family: Poppins
+		text-align: left
+		span
+			display: block
+		&:nth-child(1)
+			border-bottom: 3px solid #38c695
+			.blog-flex-wrap-content-item__title
+				color: #38c695
+		&:nth-child(2)
+			border-bottom: 3px solid #b27cf5
+			.blog-flex-wrap-content-item__title
+				color: #b27cf5
+		&:nth-child(3)
+			border-bottom: 3px solid #feb960
+			.blog-flex-wrap-content-item__title
+				color: #feb960
+
+.blog-flex-wrap-content-item__title
+	font-size: 15px
+	font-weight: 500
+	text-transform: uppercase
+	padding-bottom: 20px
+
+.blog-flex-wrap-content-item__subtitle
+	color: #272727
+	font-size: 18px
+	font-weight: 500
+	padding-bottom: 20px
+
+.blog-flex-wrap-content-item__text
+	color: #616161
+	font-size: 15px
+	font-weight: 400
 //blog
+
+//subscribe
+.subscribe
+	background-color: #fff
+	padding: 150px 0
+	.inner-container
+		text-align: center
+		font-family: Poppins
+
+.subscribe__title
+	color: #272727
+	font-size: 30px
+	font-weight: 400
+	padding-bottom: 55px
+
+.subscribe-label
+	display: flex
+	align-items: center
+	max-width: 400px
+	margin: 0 auto
+	input
+		border-radius: 25px 0 0 25px
+		border: 2px solid #efefef
+		background-color: #f7f7f7
+		height: 50px
+		&[placeholder]
+			padding-left: 10px
+			color: #616161
+			font-size: 16px
+			font-weight: 400
+	button
+		width: 180px
+		height: 50px
+		border-radius: 0 25px 25px 0
+		background-color: #fc5f45
+		font-size: 16px
+		font-weight: 400
+		text-transform: uppercase
+		color: #fff
+		border: none
+		transition: $transition
+		&:hover
+			cursor: pointer
+			color: #000
+			background-color: #38c695
+//subscribe
+
+//get-in-touch
+.get-in-touch
+	position: relative
+	background-color: silver
+	padding: 150px 0
+	font-family: Poppins
+	&::before
+		position: absolute
+		display: block
+		content: "10"
+		opacity: 0.3
+		top: -100px
+		left: 50%
+		transform: translateX(-50%)
+		color: #e0e0e0
+		font-family: Poppins
+		font-size: 274px
+	.inner-container
+		text-align: center
+		button
+			color: #ffffff
+			font-size: 16px
+			font-weight: 400
+			text-transform: uppercase
+			border: none
+			border-radius: 25px
+			background-color: #fc5f45
+			padding: 20px 35px
+			transition: $transition
+			&:hover
+				cursor: pointer
+				color: #000
+				background-color: #38c695
+
+.get-in-touch__title
+	color: #313131
+	font-family: Libre
+	font-size: 50px
+	font-weight: 700
+	padding-bottom: 40px
+
+.get-in-touch__text
+	max-width: 550px
+	margin: 0 auto
+	color: #616161
+	font-size: 18px
+	font-weight: 400
+	padding-bottom: 80px
+
+.form 
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	justify-content: space-between
+	max-width: 750px
+	margin: 0 auto 50px auto
+	font-family: Poppins
+	input
+		width: 365px
+		height: 50px
+		margin-bottom: 25px
+		border-radius: 4px
+		border: 1px solid #efefef
+		&[placeholder]
+			text-align: center
+			color: #616161
+			font-size: 16px
+			font-weight: 400
+	textarea
+		resize: none
+		width: 750px
+		height: 200px
+		border-radius: 4px
+		border: 1px solid #efefef
+		&[placeholder]
+			text-align: center
+			color: #616161
+			font-size: 16px
+			font-weight: 400
+			padding-top: 20px
+//get-in-touch
+
+//footer
+.footer
+	background-color: rgba(38, 39, 50, 0.85)
+	padding: 40px 0
+	.inner-container
+		text-align: center
+
+.footer__name
+	font-family: Script
+	color: #fef4f2
+	font-size: 46px
+//footer
