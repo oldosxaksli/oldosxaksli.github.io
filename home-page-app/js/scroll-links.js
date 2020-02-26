@@ -32,5 +32,6 @@ allSection.forEach((item, i, arr) => {
 	allLinks[i].addEventListener('click', (event) => {
 		allSection[i].scrollIntoView({behavior:'smooth'});
 		console.log(allSection[i]);
+		event.preventDefault();
 	});
 });
