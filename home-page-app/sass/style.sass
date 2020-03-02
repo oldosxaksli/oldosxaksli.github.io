@@ -3,6 +3,28 @@
 @import "fonts"
 
 $transition: all .3s ease
+$section-padding: 145px 0
+$opacity-age: 0.3
+$color-red: #fc5f45
+$color-green: #38c695
+$color-blue: #b27cf5
+$color-orange: #feb960
+
+@mixin background-img
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+
+@mixin section-absolute-intager
+		position: absolute
+		display: block
+		opacity: $opacity-age
+		top: -100px
+		left: 50%
+		transform: translateX(-50%)
+		color: #e0e0e0
+		font-family: Poppins
+		font-size: 274px
 
 .inner-container
 	max-width: 1366px
@@ -58,10 +80,8 @@ $transition: all .3s ease
 //one-screen
 .one-screen
 	background: url('../img/home-bg/background-image2.webp')
-	background-size: cover
-	background-repeat: no-repeat
-	background-position: center
-	padding: 175px 0
+	@include background-img
+	padding: 220px 0 175px 0
 	.inner-container
 		text-align: center
 		button
@@ -104,11 +124,11 @@ $transition: all .3s ease
 		width: 30%
 		text-align: center
 		&:nth-child(1)
-			color: #38c695
+			color: $color-green
 		&:nth-child(2)
-			color: #b27cf5
+			color: $color-blue
 		&:nth-child(3)
-			color: #feb960
+			color: $color-orange
 //one-screen
 
 //about us
@@ -139,7 +159,7 @@ $transition: all .3s ease
 		content: "01"
 		top: -100px
 		left: 0
-		opacity: 0.3
+		opacity: $opacity-age
 		color: #e0e0e0
 		font-family: Poppins
 		font-size: 274px
@@ -172,13 +192,13 @@ $transition: all .3s ease
 	width: 25%
 	height: 3px
 	&:nth-child(1)
-		background-color: #fc5f45
+		background-color: $color-red
 	&:nth-child(2)
-		background-color: #38c695
+		background-color: $color-green
 	&:nth-child(3)
-		background-color: #b27cf5
+		background-color: $color-blue
 	&:nth-child(4)
-		background-color:  #feb960
+		background-color: $color-orange
 //about us
 
 //our-focus
@@ -187,16 +207,8 @@ $transition: all .3s ease
 	background-color: #f7f7f7
 	text-align: center
 	&:before
-		position: absolute
-		display: block
+		@include section-absolute-intager
 		content: "02"
-		opacity: 0.3
-		top: -100px
-		left: 50%
-		transform: translateX(-50%)
-		color: #e0e0e0
-		font-family: Poppins
-		font-size: 274px
 	.inner-container
 		padding: 150px 0
 
@@ -224,49 +236,14 @@ $transition: all .3s ease
 	.box
 		background-color: #fff
 		padding: 50px 35px
-		position: relative
-		&:nth-child(1)::after
-			position: absolute
-			display: block
-			bottom: 0
-			left: 0
-			content: ""
-			width: 100%
-			height: 3px
-			background-color: #fc5f45
-
-		&:nth-child(2)::after
-			position: absolute
-			display: block
-			bottom: 0
-			left: 0
-			content: ""
-			width: 100%
-			height: 3px
-			background-color: #38c695
-
-		&:nth-child(3)::after
-			position: absolute
-			display: block
-			bottom: 0
-			left: 0
-			content: ""
-			width: 100%
-			height: 3px
-			background-color: #b27cf5
-
-		&:nth-child(4)::after
-			position: absolute
-			display: block
-			bottom: 0
-			left: 0
-			content: ""
-			width: 100%
-			height: 3px
-			background-color: #feb960
-
-		&svg
-			padding-bottom: 300px
+		&:nth-child(1)
+			border-bottom: 3px solid $color-red
+		&:nth-child(2)
+			border-bottom: 3px solid $color-green
+		&:nth-child(3)
+			border-bottom: 3px solid $color-blue
+		&:nth-child(4)
+			border-bottom: 3px solid $color-orange
 
 		&__title
 			color: #313131
@@ -276,6 +253,7 @@ $transition: all .3s ease
 	
 		&__text
 			max-width: 196px
+			margin: 0 auto
 			color: #616161
 			font-family: Poppins
 			font-size: 15px
@@ -289,9 +267,7 @@ $transition: all .3s ease
 	text-align: center
 	padding: 150px 0
 	background: url("../img/explore-bg/background_image.webp")
-	background-size: cover
-	background-repeat: no-repeat
-	background-position: center
+	@include background-img
 	.inner-container
 		padding: 0
 
@@ -316,16 +292,8 @@ $transition: all .3s ease
 	text-align: center
 	position: relative
 	&::before
-		position: absolute
-		display: block
+		@include section-absolute-intager
 		content: "03"
-		opacity: 0.3
-		top: -100px
-		left: 50%
-		transform: translateX(-50%)
-		color: #e0e0e0
-		font-family: Poppins
-		font-size: 274px
 	.inner-container
 		padding: 150px 0
 
@@ -356,7 +324,7 @@ $transition: all .3s ease
 		max-height: 288px
 		transition: $transition
 		&:hover
-			box-shadow: 0 0 15px silver
+			box-shadow: 0 0 10px silver
 		img
 			width: 100%
 			height: 100%
@@ -368,16 +336,8 @@ $transition: all .3s ease
 	text-align: center
 	position: relative
 	&::before
-		position: absolute
-		display: block
+		@include section-absolute-intager
 		content: "04"
-		opacity: 0.3
-		top: -100px
-		left: 50%
-		transform: translateX(-50%)
-		color: #e0e0e0
-		font-family: Poppins
-		font-size: 274px
 	.inner-container
 		padding: 140px 0
 
@@ -413,16 +373,13 @@ $transition: all .3s ease
 			padding-bottom: 15px
 
 .block:nth-child(1)
-	border-bottom: 3px solid #fc5f45
-
+	border-bottom: 3px solid $color-red
 .block:nth-child(2)
-	border-bottom: 3px solid #38c695
-
+	border-bottom: 3px solid $color-green
 .block:nth-child(3)
-	border-bottom: 3px solid #b27cf5
-
+	border-bottom: 3px solid $color-blue
 .block:nth-child(4)
-	border-bottom: 3px solid #feb960
+	border-bottom: 3px solid $color-orange
 
 .block__title
 	font-size: 18px
@@ -431,16 +388,13 @@ $transition: all .3s ease
 	color: #000
 
 .block:nth-child(1) .block__title
-	color: #fc5f45
-
+	color: $color-red
 .block:nth-child(2) .block__title
-	color: #38c695
-
+	color: $color-green
 .block:nth-child(3) .block__title
-	color: #b27cf5
-
+	color: $color-blue
 .block:nth-child(4) .block__title
-	color: #feb960
+	color: $color-orange
 
 .block__text
 	font-size: 13px
@@ -452,9 +406,7 @@ $transition: all .3s ease
 //bg-of-our-team
 .bg-of-our-team
 	background: url('../img/team-bg/Layer_24.webp')
-	background-size: cover
-	background-repeat: no-repeat
-	background-position: center
+	@include background-img
 	.inner-container
 		padding: 145px 0
 
@@ -490,16 +442,8 @@ $transition: all .3s ease
 	background-color: #fff
 	padding: 150px 0
 	&::before
-		position: absolute
-		display: block
+		@include section-absolute-intager
 		content: "05"
-		opacity: 0.3
-		top: -100px
-		left: 50%
-		transform: translateX(-50%)
-		color: #e0e0e0
-		font-family: Poppins
-		font-size: 274px
 	.inner-conatiner
 		text-align: center
 
@@ -527,8 +471,8 @@ $transition: all .3s ease
 
 .work-wrap-flex__item
 	position: relative
-	min-width: 556px
-	min-height: 300px
+	max-width: 556px
+	max-height: 300px
 	img
 		width: 100%
 		height: 100%
@@ -539,21 +483,19 @@ $transition: all .3s ease
 	padding: 40px 10px 40px 100px
 	transform: translateX(-50%)
 	opacity: .9
-	width: 400px
-	height: 250px
+	min-width: 400px
+	min-height: 250px
 	font-family: Poppins
 	text-align: left
-	left: -10%
 	top: 15px
-
-.work-wrap-flex__item:nth-child(even) .work-wrap-flex__hidden
-	left: 110%
+	left: 50%
 
 	.title
 		color: #272727
 		font-size: 25px
 		font-weight: 400
 		padding-bottom: 25px
+
 	.text
 		max-width: 261px
 		margin: 0 auto
@@ -561,61 +503,43 @@ $transition: all .3s ease
 		font-size: 15px
 		font-weight: 400
 
+.work-wrap-flex__item:nth-child(even) .work-wrap-flex__hidden
+	left: 115%
+
+.work-wrap-flex__item:nth-child(odd) .work-wrap-flex__hidden
+	left: -15%
+
+@mixin work-wrap-flex__hidden
+	position: absolute
+	display: block
+	top: 10px
+	left: 10px
+	color: #e0e0e0
+	font-family: Libre
+	font-size: 50px
+	font-weight: 700
+	text-transform: uppercase
+
 .work-wrap-flex__item:nth-child(1) .work-wrap-flex__hidden
-		border-bottom: #fc5f45 3px solid
+		border-bottom: $color-red 3px solid
 		&:before
-			position: absolute
-			display: block
+			@include work-wrap-flex__hidden
 			content: "01"
-			left: 10px
-			top: 10px
-			color: #e0e0e0
-			font-family: Libre
-			font-size: 50px
-			font-weight: 700
-			text-transform: uppercase
-
 .work-wrap-flex__item:nth-child(2) .work-wrap-flex__hidden
-		border-bottom: #38c695 3px solid
+		border-bottom: $color-green 3px solid
 		&:before
-			position: absolute
-			display: block
+			@include work-wrap-flex__hidden
 			content: "02"
-			left: 10px
-			top: 10px
-			color: #e0e0e0
-			font-family: Libre
-			font-size: 50px
-			font-weight: 700
-			text-transform: uppercase
-
 .work-wrap-flex__item:nth-child(3) .work-wrap-flex__hidden
-		border-bottom: #b27cf5 3px solid
+		border-bottom: $color-blue 3px solid
 		&:before
-			position: absolute
-			display: block
+			@include work-wrap-flex__hidden
 			content: "03"
-			left: 10px
-			top: 10px
-			color: #e0e0e0
-			font-family: Libre
-			font-size: 50px
-			font-weight: 700
-			text-transform: uppercase
-
 .work-wrap-flex__item:nth-child(4) .work-wrap-flex__hidden
-		border-bottom: #feb960 3px solid
+		border-bottom: $color-orange 3px solid
 		&:before
-			position: absolute
-			display: block
+			@include work-wrap-flex__hidden
 			content: "04"
-			left: 10px
-			top: 10px
-			color: #e0e0e0
-			font-family: Libre
-			font-size: 50px
-			font-weight: 700
-			text-transform: uppercase
 //work
 
 //pricing
@@ -624,16 +548,8 @@ $transition: all .3s ease
 	background-color:  #f7f7f7
 	padding: 145px 0
 	&::before
-		position: absolute
-		display: block
+		@include section-absolute-intager
 		content: "06"
-		opacity: 0.3
-		top: -100px
-		left: 50%
-		transform: translateX(-50%)
-		color: #e0e0e0
-		font-family: Poppins
-		font-size: 274px
 	.inner-container
 		text-align: center
 
@@ -663,6 +579,9 @@ $transition: all .3s ease
 		max-width: 660px
 		max-height: 670px
 		padding: 45px 50px
+		transition: $transition
+		&:hover
+			box-shadow: 0 0 10px silver
 		button
 			border-radius: 25px
 			padding: 15px 40px
@@ -671,31 +590,31 @@ $transition: all .3s ease
 			background-color: transparent
 			transition: $transition
 		&:nth-child(1)
-			border-top: 3px solid #38c695
+			border-top: 3px solid $color-green
 			button
-				border: 2px solid #38c695
-				color: #38c695
+				border: 2px solid $color-green
+				color: $color-green
 				&:hover
 					cursor: pointer
-					background-color: #38c695
+					background-color: $color-green
 					color: #fff
 		&:nth-child(2)
-			border-top: 3px solid #fc5f45
+			border-top: 3px solid $color-red
 			button
-				border: 2px solid #fc5f45
-				color: #fc5f45
+				border: 2px solid $color-red
+				color: $color-red
 				&:hover
 					cursor: pointer
-					background-color: #fc5f45
+					background-color: $color-red
 					color: #fff
 		&:nth-child(3)
-			border-top: 3px solid #b27cf5
+			border-top: 3px solid $color-blue
 			button
-				border: 2px solid #b27cf5
-				color: #b27cf5
+				border: 2px solid $color-blue
+				color: $color-blue
 				&:hover
 					cursor: pointer
-					background-color: #b27cf5
+					background-color: $color-blue
 					color: #fff
 
 .pricing-wrap-flex-item__title
@@ -718,50 +637,36 @@ $transition: all .3s ease
 	color: #fff
 	letter-spacing: 1px
 
+@mixin pricing-wrap-flex-item-circle
+	position: absolute
+	display: block
+	content: ""
+	width: 117px
+	height: 117px
+	background-color: transparent
+	border-radius: 50%
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+
 .pricing-wrap-flex-item:nth-child(1) .pricing-wrap-flex-item-circle
-		background-color: #38c695
+		background-color: $color-green
 		&::before
-			position: absolute
-			display: block
-			content: ""
-			width: 117px
-			height: 117px
-			background-color: transparent
-			border: 3px solid #38c695
-			border-radius: 50%
-			top: 50%
-			left: 50%
-			transform: translate(-50%, -50%)
+			@include pricing-wrap-flex-item-circle
+			border: 3px solid $color-green
 
 .pricing-wrap-flex-item:nth-child(2) .pricing-wrap-flex-item-circle
-		background-color: #fc5f45
+		background-color: $color-red
 		&::before
-			position: absolute
-			display: block
-			content: ""
-			width: 117px
-			height: 117px
-			background-color: transparent
-			border: 3px solid #fc5f45
-			border-radius: 50%
-			top: 50%
-			left: 50%
-			transform: translate(-50%, -50%)
+			@include pricing-wrap-flex-item-circle
+			border: 3px solid $color-red
 
 .pricing-wrap-flex-item:nth-child(3) .pricing-wrap-flex-item-circle
-		background-color: #b27cf5
+		background-color: $color-blue
 		&::before
-			position: absolute
-			display: block
-			content: ""
-			width: 117px
-			height: 117px
-			background-color: transparent
-			border: 3px solid #b27cf5
-			border-radius: 50%
-			top: 50%
-			left: 50%
-			transform: translate(-50%, -50%)
+			@include pricing-wrap-flex-item-circle
+			border: 3px solid $color-blue
+
 .pricing-wrap-flex-item__list
 	padding-bottom: 40px	
 	ul 
@@ -775,16 +680,8 @@ $transition: all .3s ease
 	background-color: rgba(38, 39, 50, 0.85)
 	padding: 145px 0
 	&::before
-		position: absolute
-		display: block
+		@include section-absolute-intager
 		content: "07"
-		opacity: 0.3
-		top: -100px
-		left: 50%
-		transform: translateX(-50%)
-		color: #e0e0e0
-		font-family: Poppins
-		font-size: 274px
 	.inner-container
 		text-align: center
 
@@ -830,7 +727,7 @@ $transition: all .3s ease
 		content: "“"
 		top: -30px
 		left: -10px
-		opacity: 0.3
+		opacity: $opacity-age
 		color: #e0e0e0
 		font-family: Libre
 		font-size: 338px
@@ -891,16 +788,8 @@ $transition: all .3s ease
 	background-color: #fff
 	padding: 145px 0
 	&::before
-		position: absolute
-		display: block
+		@include section-absolute-intager
 		content: "08"
-		opacity: 0.3
-		top: -100px
-		left: 50%
-		transform: translateX(-50%)
-		color: #e0e0e0
-		font-family: Poppins
-		font-size: 274px
 	.inner-container
 		text-align: center
 
@@ -969,7 +858,7 @@ $transition: all .3s ease
 	font-weight: 400
 	text-transform: uppercase
 	border-radius: 25px
-	background-color: #fc5f45
+	background-color: $color-red
 	padding: 20px 40px
 	border: none
 	transition: $transition
@@ -985,16 +874,8 @@ $transition: all .3s ease
 	background-color: #f7f7f7
 	padding: 145px 0
 	&::before
-		position: absolute
-		display: block
+		@include section-absolute-intager
 		content: "09"
-		opacity: 0.3
-		top: -100px
-		left: 50%
-		transform: translateX(-50%)
-		color: #e0e0e0
-		font-family: Poppins
-		font-size: 274px
 	.inner-container
 		text-align: center
 
@@ -1020,15 +901,15 @@ $transition: all .3s ease
 	justify-content: center
 
 .blog-flex-wrap-figure
-	background-color: #fff
 	margin: 0
 	img
 		max-width: 555px
 		max-height: 443px
 
 .blog-flex-wrap-figure-figcaption
+	background-color: #fff
 	padding: 45px 50px
-	border-bottom: 3px solid  #fc5f45
+	border-bottom: 3px solid $color-red
 	text-align: left
 	span
 		display: block
@@ -1061,17 +942,17 @@ $transition: all .3s ease
 		span
 			display: block
 		&:nth-child(1)
-			border-bottom: 3px solid #38c695
+			border-bottom: 3px solid $color-green
 			.blog-flex-wrap-content-item__title
-				color: #38c695
+				color: $color-green
 		&:nth-child(2)
-			border-bottom: 3px solid #b27cf5
+			border-bottom: 3px solid $color-blue
 			.blog-flex-wrap-content-item__title
-				color: #b27cf5
+				color: $color-blue
 		&:nth-child(3)
-			border-bottom: 3px solid #feb960
+			border-bottom: 3px solid $color-orange
 			.blog-flex-wrap-content-item__title
-				color: #feb960
+				color: $color-orange
 
 .blog-flex-wrap-content-item__title
 	font-size: 15px
@@ -1124,7 +1005,7 @@ $transition: all .3s ease
 		width: 180px
 		height: 50px
 		border-radius: 0 25px 25px 0
-		background-color: #fc5f45
+		background-color: $color-red
 		font-size: 16px
 		font-weight: 400
 		text-transform: uppercase
@@ -1144,16 +1025,8 @@ $transition: all .3s ease
 	padding: 150px 0
 	font-family: Poppins
 	&::before
-		position: absolute
-		display: block
+		@include section-absolute-intager
 		content: "10"
-		opacity: 0.3
-		top: -100px
-		left: 50%
-		transform: translateX(-50%)
-		color: #e0e0e0
-		font-family: Poppins
-		font-size: 274px
 	.inner-container
 		text-align: center
 		button
@@ -1163,7 +1036,7 @@ $transition: all .3s ease
 			text-transform: uppercase
 			border: none
 			border-radius: 25px
-			background-color: #fc5f45
+			background-color: $color-red
 			padding: 20px 35px
 			transition: $transition
 			&:hover
@@ -1231,3 +1104,4 @@ $transition: all .3s ease
 	color: #fef4f2
 	font-size: 46px
 //footer
+@import "media"
