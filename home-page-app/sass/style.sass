@@ -25,11 +25,40 @@ $color-orange: #feb960
 		color: #e0e0e0
 		font-family: Poppins
 		font-size: 274px
-
+//main container
 .inner-container
 	max-width: 1366px
 	margin: 0 auto
 	padding: 0 15px
+//main container
+
+//hidden-menu
+.header-page-menu-hidden
+	display: none
+	align-items: center
+	justify-content: center
+	flex-direction: column
+	width: 40px
+	height: 40px
+	background-color: #fff
+	border-radius: 50%
+	transition: $transition
+	overflow: hidden
+	&:hover
+		cursor: pointer
+		background-color: #000
+	&:hover .header-page-menu-hidden__item
+			background-color: #fff
+	&:hover .header-page-menu-hidden__item:nth-child(2)
+		display: none
+	.header-page-menu-hidden__item
+		width: 25px
+		height: 3px
+		margin: 3px 0
+		border-radius: 10px
+		background-color: #000
+		transition: $transition
+//hidden-menu
 
 //header-page
 .header-page
@@ -483,8 +512,8 @@ $color-orange: #feb960
 	padding: 40px 10px 40px 100px
 	transform: translateX(-50%)
 	opacity: .9
-	min-width: 400px
-	min-height: 250px
+	max-width: 450px
+	max-height: 350px
 	font-family: Poppins
 	text-align: left
 	top: 15px
