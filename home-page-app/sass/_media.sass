@@ -83,7 +83,7 @@
 		font-size: 230px
 		top: -80px
 
-	.get-in-touch
+	.get-in-touch::before
 		font-size: 230px
 		top: -80px
 
@@ -269,6 +269,45 @@
 		font-size: 36px
 
 @media (min-width: 500px) and (max-width: 749px)
+	.about-us-content::after
+		font-size: 150px
+
+	.our-focus::before
+		font-size: 150px
+		top: -50px
+
+	.portfolio::before
+		font-size: 150px
+		top: -50px
+
+	.our-team::before
+		font-size: 150px
+		top: -50px
+
+	.work::before
+		font-size: 150px
+		top: -50px
+
+	.pricing::before
+		font-size: 150px
+		top: -50px
+
+	.testimonials::before
+		font-size: 150px
+		top: -50px
+
+	.select::before
+		font-size: 150px
+		top: -50px
+
+	.blog::before
+		font-size: 150px
+		top: -50px
+
+	.get-in-touch::before
+		font-size: 150px
+		top: -50px
+
 	.header-page__logo
 		padding-left: 10px
 
@@ -337,6 +376,9 @@
 	.portfolio
 		.inner-container
 			padding: 130px 0
+
+	.portfolio__text
+		max-width: 450px
 
 	.portfolio-flex-boxes .box
 		margin: 20px
@@ -517,17 +559,15 @@
 
 	.select-wrap-flex-item
 		max-width: 200px
-		padding: 10px 30px
-
-	.select-wrap-flex__title
-		font-size: 16px
+		padding: 15px 20px
+		background-color: #f5f1e9
 
 	.select-wrap-flex-item__text
 		font-size: 14px
 
 	.select-wrap-flex__title
-		font-size: 16px
-		padding-left: 15px
+		font-size: 14px
+		padding-left: 10px
 
 	.select-wrap-flex-item__text
 		font-size: 13px
@@ -542,3 +582,74 @@
 	.select-wrap-bottom button
 		font-size: 14px
 		padding: 10px 20px
+
+	.blog__text
+		max-width: 450px
+
+	.blog-flex-wrap
+		align-items: center
+		flex-direction: column
+		justify-content: center
+	
+	.blog-flex-wrap-figure
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+
+	.blog-flex-wrap-figure-figcaption
+		max-width: 600px
+
+	.blog-flex-wrap-content-item:not(:last-child)
+		margin-bottom: 15px
+
+	.blog-flex-wrap-content
+		flex-direction: column
+		align-items: flex-start
+		justify-content: flex-start
+		margin-left: 0
+
+	.blog-flex-wrap-figure
+		margin-bottom: 40px
+
+	.subscribe
+		padding: 130px 0
+
+	.subscribe__title
+		max-width: 450px
+		margin: 0 auto
+		padding-bottom: 50px
+
+	.subscribe-label
+		max-width: 380px
+		input
+			height: 45px
+			&[placeholder]
+				font-size: 14px
+		button
+			width: 150px
+			height: 45px
+			font-size: 14px
+
+	.get-in-touch
+		padding: 130px 0
+
+	.get-in-touch__text
+		max-width: 450px
+
+	.form 
+		max-width: 700px
+		input
+			width: 49%
+
+	.get-in-touch .inner-container button
+		padding: 15px 20px
+		font-size: 15px
+
+	.footer
+		padding: 25px 0
+
+	.footer__name
+		font-size: 30px
+
+@media (min-width: 320px) and (max-width: 499px)
