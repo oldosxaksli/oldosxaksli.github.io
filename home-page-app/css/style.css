@@ -522,6 +522,7 @@ section {
 
 .bg-of-our-team {
   background: url("../img/team-bg/Layer_24.webp");
+  font-family: Poppins;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -534,10 +535,10 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  font-family: Poppins;
 }
 .bg-of-our-team-flex-wrap .item {
   text-align: center;
+  padding: 0 10px;
 }
 .bg-of-our-team-flex-wrap .item span {
   display: block;
@@ -560,7 +561,6 @@ section {
 .work {
   position: relative;
   background-color: #fff;
-  padding: 150px 0;
 }
 .work::before {
   position: absolute;
@@ -574,8 +574,9 @@ section {
   font-size: 274px;
   content: "05";
 }
-.work .inner-conatiner {
+.work .inner-container {
   text-align: center;
+  padding: 150px 0;
 }
 
 .work__title {
@@ -2367,12 +2368,14 @@ section {
   .one-screen-wrap-flex-icons {
     padding-top: 90px;
     justify-content: space-between;
+    align-items: flex-start;
   }
   .one-screen-wrap-flex-icons .item {
     width: 33.3%;
   }
   .one-screen-wrap-flex-icons span {
-    font-size: 47%;
+    padding-top: 15px;
+    font-size: 0.5em;
   }
 
   .about-us {
@@ -2416,6 +2419,7 @@ section {
     max-width: 300px;
     font-weight: 400;
     line-height: 20px;
+    font-size: 14px;
   }
   .about-us-content__text:nth-child(2) {
     padding-bottom: 20px;
@@ -2490,6 +2494,70 @@ section {
     margin: 10px;
     max-width: 140px;
     max-height: 200px;
+  }
+
+  .our-team .inner-container {
+    padding: 100px 0;
+  }
+
+  .our-team__title {
+    font-size: 25px;
+    padding-bottom: 20px;
+  }
+
+  .our-team__text {
+    max-width: 300px;
+    font-size: 14px;
+    padding-bottom: 40px;
+  }
+
+  .our-team-wrap-block .block {
+    margin: 15px;
+    max-width: 130px;
+    max-height: 390px;
+    background-color: #fff;
+  }
+  .our-team-wrap-block .block img {
+    padding-bottom: 15px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .block__title {
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+
+  .block__text {
+    font-size: 12px;
+    padding-bottom: 10px;
+  }
+
+  .bg-of-our-team .inner-container {
+    padding: 100px 0;
+  }
+  .bg-of-our-team .item .item__title {
+    font-size: 16px;
+    padding: 20px 0;
+  }
+  .bg-of-our-team .item .item__text {
+    font-size: 12px;
+    padding-bottom: 20px;
+  }
+
+  .work__title {
+    font-size: 25px;
+    padding-bottom: 20px;
+  }
+
+  .work__text {
+    max-width: 300px;
+    font-size: 14px;
+    padding-bottom: 40px;
+  }
+
+  .work .inner-container {
+    padding: 100px 0;
   }
 }
 

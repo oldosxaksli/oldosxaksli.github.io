@@ -437,6 +437,7 @@ $color-orange: #feb960
 //bg-of-our-team
 .bg-of-our-team
 	background: url('../img/team-bg/Layer_24.webp')
+	font-family: Poppins
 	@include background-img
 	.inner-container
 		padding: 145px 0
@@ -445,9 +446,9 @@ $color-orange: #feb960
 	display: flex
 	align-items: center
 	justify-content: space-around
-	font-family: Poppins
 	.item
 		text-align: center
+		padding: 0 10px
 
 		span
 			display: block
@@ -471,12 +472,12 @@ $color-orange: #feb960
 .work
 	position: relative
 	background-color: #fff
-	padding: 150px 0
 	&::before
 		@include section-absolute-intager
 		content: "05"
-	.inner-conatiner
+	.inner-container
 		text-align: center
+		padding: 150px 0
 
 .work__title
 	color: #313131
