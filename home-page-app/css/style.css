@@ -12,6 +12,10 @@
   font-family: "Libre";
   src: url("../fonts/Libre/LibreBaskerville-Regular.ttf");
 }
+section {
+  overflow: hidden;
+}
+
 .inner-container {
   max-width: 1366px;
   margin: 0 auto;
@@ -54,8 +58,7 @@
   width: 100%;
   z-index: 10;
   padding: 30px 0;
-  box-shadow: 0 0 24px rgba(0, 0, 0, 0.25);
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.96);
 }
 .header-page .inner-container {
   display: flex;
@@ -1815,12 +1818,35 @@
     padding-left: 10px;
   }
 
-  .header-page-menu {
+  .header-page-menu-hidden {
     display: none;
   }
 
-  .header-page-menu-hidden {
-    display: flex;
+  .header-page-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: radial-gradient(#55ddff, #0081b5);
+    padding: 20px 0;
+    opacity: 0.98;
+  }
+  .header-page-menu .header-page-menu__link {
+    margin-right: 0;
+    font-size: 16px;
+    text-align: left;
+    color: #000;
+    opacity: 1;
+  }
+  .header-page-menu .header-page-menu__link:hover {
+    color: #fff;
+    padding-left: 15px;
   }
 
   .one-screen {
@@ -2256,6 +2282,214 @@
 
   .footer__name {
     font-size: 30px;
+  }
+}
+@media (min-width: 320px) and (max-width: 499px) {
+  .about-us-content::after {
+    font-size: 130px;
+  }
+
+  .our-focus::before {
+    font-size: 130px;
+    top: -45px;
+  }
+
+  .portfolio::before {
+    font-size: 130px;
+    top: -45px;
+  }
+
+  .our-team::before {
+    font-size: 130px;
+    top: -45px;
+  }
+
+  .work::before {
+    font-size: 130px;
+    top: -45px;
+  }
+
+  .pricing::before {
+    font-size: 130px;
+    top: -45px;
+  }
+
+  .testimonials::before {
+    font-size: 130px;
+    top: -45px;
+  }
+
+  .select::before {
+    font-size: 130px;
+    top: -45px;
+  }
+
+  .blog::before {
+    font-size: 130px;
+    top: -45px;
+  }
+
+  .get-in-touch::before {
+    font-size: 130px;
+    top: -45px;
+  }
+
+  .header-page {
+    padding: 20px 0;
+  }
+
+  .header-page__logo {
+    padding-left: 5px;
+  }
+
+  .header-page-menu {
+    display: none;
+  }
+
+  .header-page-menu-hidden {
+    display: flex;
+  }
+
+  .one-screen {
+    padding: 200px 0 130px 0;
+  }
+
+  .one-screen__title {
+    width: 300px;
+    font-size: 25px;
+  }
+
+  .one-screen .inner-container button {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+
+  .one-screen-wrap-flex-icons {
+    padding-top: 90px;
+    justify-content: space-between;
+  }
+  .one-screen-wrap-flex-icons .item {
+    width: 33.3%;
+  }
+  .one-screen-wrap-flex-icons span {
+    font-size: 47%;
+  }
+
+  .about-us {
+    padding: 100px 0 80px 0;
+  }
+
+  .about-us .inner-container {
+    flex-direction: column;
+  }
+
+  .about-us__img {
+    max-width: 300px;
+    max-height: auto;
+    order: 1;
+  }
+  .about-us__img img {
+    width: 100%;
+  }
+
+  .about-us-content {
+    order: 0;
+    text-align: center;
+    max-width: 300px;
+    max-height: 750px;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  .about-us-content::after {
+    top: -140px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .about-us-content__title {
+    font-size: 25px;
+    font-weight: 700;
+    padding-bottom: 20px;
+  }
+
+  .about-us-content__text {
+    max-width: 300px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .about-us-content__text:nth-child(2) {
+    padding-bottom: 20px;
+  }
+
+  .our-focus .inner-container {
+    padding: 100px 0;
+  }
+
+  .our-focus__title {
+    font-size: 25px;
+    padding-bottom: 20px;
+  }
+
+  .our-focus__text {
+    font-size: 14px;
+    max-width: 300px;
+    padding-bottom: 20px;
+  }
+
+  .our-focus-flex-wrap-boxes {
+    justify-content: center;
+  }
+  .our-focus-flex-wrap-boxes .box {
+    padding: 20px;
+    margin: 15px;
+  }
+  .our-focus-flex-wrap-boxes .box__title {
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+  .our-focus-flex-wrap-boxes .box__text {
+    max-width: 190px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .explore {
+    padding: 100px 0;
+  }
+
+  .explore__title {
+    max-width: 300px;
+    margin: 0 auto;
+    font-size: 25px;
+  }
+
+  .explore__text {
+    font-size: 14px;
+  }
+
+  .explore-svg {
+    margin: 25px auto;
+  }
+
+  .portfolio .inner-container {
+    padding: 100px 0;
+  }
+
+  .portfolio__title {
+    font-size: 25px;
+    padding-bottom: 20px;
+  }
+
+  .portfolio__text {
+    max-width: 300px;
+    font-size: 14px;
+    padding-bottom: 20px;
+  }
+
+  .portfolio-flex-boxes .box {
+    margin: 10px;
+    max-width: 140px;
+    max-height: 200px;
   }
 }
 
